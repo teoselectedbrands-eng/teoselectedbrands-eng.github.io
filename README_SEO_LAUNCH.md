@@ -1,40 +1,12 @@
-# Aetherion — Public search-launch v0.9.3
+# Aetherion - approved public release, 28 October 2026
 
-## Precisely what this release does
+This repository contains the public static website for https://aetherionmovement.com/.
+The release preserves the cinematic homepage and existing legacy destinations, and adds independent Movement, Classes, Learn, Workshops, Journal, a learning-resource page and six Journal article pages (13 canonical documents including the homepage).
 
-- Keeps the current v0.9.2 website content, movement-first design and contact address unchanged.
-- Changes the existing homepage robots meta tag from `noindex,nofollow` to `index,follow,max-image-preview:large`.
-- Adds a canonical homepage URL, Open Graph sharing metadata, Twitter summary card, and Schema.org `WebSite` JSON-LD.
-- Includes a root-only sitemap and permissive robots.txt.
-- Keeps CNAME exactly `aetherionmovement.com`.
+The sitemap lists only the canonical HTML document URLs. Each page has its own title, description and canonical URL. Supporting HTML worksheets are noindex; the two PDF resources are linked from Learn and are outside the sitemap. Google indexing must be checked in Search Console after deployment; publication does not establish inclusion.
 
-## Limitations and next release
+Classes and workshops remain unscheduled concepts. No booking, accounts, analytics or data collection is activated.
 
-This is **a single HTML page** containing 22 sections with `#/...` navigation. The sitemap contains **only the actual homepage**, not fictitious `/classes/` or `/journal/` URLs. Search engines will not index the 22 hash sections as independent pages. A later multi-page static export (real directory URLs, unique title/description/canonical per page, clean anchor links, updated sitemap) is needed for strong section-specific SEO. No Google ranking or indexing date can be guaranteed.
+The source registries, authoring tools, owner reports and recovered materials are retained privately and are excluded from this public repository. The public deployment continues to use the existing GitHub Pages source and CNAME. DNS is unchanged.
 
-## Publishing on iPhone with Working Copy
-
-1. Keep a backup of the current `main` version (the latest GitHub commit is your rollback point).
-2. If replacing a full file is easy, replace only the root `index.html` with the one in this package. Otherwise follow the *minimal manual fix* below.
-3. Add `robots.txt` and `sitemap.xml` at the repository root. Ensure `CNAME` remains unchanged.
-4. In Working Copy, Commit changes and Push to `origin/main`. Verify GitHub Actions shows a green Pages deployment.
-5. Visit `https://aetherionmovement.com/` on another browser and inspect the HTML for robots index instructions, then visit `https://aetherionmovement.com/robots.txt` and `/sitemap.xml`.
-6. In Google Search Console, add a **Domain** property for `aetherionmovement.com`, copy Google's *unique* TXT verification string into Spaceship DNS, verify ownership, submit `sitemap.xml`, then use URL Inspection → Request indexing for the homepage.
-7. In Bing Webmaster Tools, import your verified Search Console property or verify separately.
-
-### Minimal manual fix when download/import of large HTML fails
-
-Use the Working Copy HTML editor's Find & Replace feature in the root `index.html`:
-
-Find EXACTLY: `noindex,nofollow`
-
-Replace with EXACTLY: `index,follow,max-image-preview:large`
-
-Then Commit and Push. Do **not** replace arbitrary other text or change your email/DNS records. This minimal fix allows indexing, but does not add the optional SEO metadata, sitemap or robots.txt. Do not press Fork & Push: authorize the existing remote instead.
-
-## Notes
-
-- Google ignores `<meta name="keywords">`; don't waste time stuffing keywords there.
-- Avoid adding made-up business addresses, practitioner services, event dates, reviews or workshop bookings.
-- Spaceship MX/SPF/DKIM/DMARC mail records are separate from website indexing. Don't replace or remove them.
-- Avoid keeping a staging/noindex build on the same production domain after this change.
+Rollback baseline: 0ed1f52a006cff9fb490eadc33e06f6f66f8425f. Restore with a new reviewed revert commit; do not force-reset main or delete later unrelated work.
