@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="map-title map-desc">
+<title id="map-title">One fictional square, several ways to read it</title><desc id="map-desc">Route A runs directly from an entrance to a stepped building entry. Route B follows the edge past a resting point. An information point and a change of level invite questions about access, waiting and wayfinding. This is an invented learning sketch, not a checked route.</desc>
+<rect width="960" height="560" fill="#f2f1e7"/>
+<g font-family="Arial,sans-serif" fill="#203a2f"><text x="44" y="47" font-size="17" font-weight="700" letter-spacing="2">AETHERION / A PLACE TO READ</text><text x="44" y="79" font-size="15">Fictional learning sketch · conditions and access remain questions</text></g>
+<rect x="155" y="130" width="620" height="310" rx="28" fill="#e1e6d7" stroke="#6d8066" stroke-width="2"/>
+<rect x="720" y="210" width="174" height="134" rx="5" fill="#263f32"/>
+<text x="742" y="265" font-family="Arial,sans-serif" font-size="18" fill="#f9f7ee">Shared room</text>
+<text x="742" y="294" font-family="Arial,sans-serif" font-size="14" fill="#f9f7ee">Entry shown</text>
+<path d="M75 300 H699" fill="none" stroke="#d6633a" stroke-width="9"/>
+<path d="M75 300 H185 Q210 300 210 355 V375 Q210 397 235 397 H651 Q685 397 685 361 V325" fill="none" stroke="#365b45" stroke-width="7" stroke-dasharray="15 9"/>
+<circle cx="75" cy="300" r="15" fill="#203a2f"/><circle cx="365" cy="397" r="12" fill="#365b45"/>
+<path d="M699 278 H716 M699 288 H716 M699 298 H716 M699 308 H716 M699 318 H716" stroke="#203a2f" stroke-width="4"/>
+<rect x="340" y="177" width="130" height="20" rx="8" fill="#738663"/><path d="M354 199 V216 M457 199 V216" stroke="#738663" stroke-width="6"/>
+<circle cx="244" cy="236" r="21" fill="#f9f7ee" stroke="#203a2f" stroke-width="2"/><text x="241" y="243" font-size="23" font-family="Arial,sans-serif" fill="#203a2f">i</text>
+<g font-family="Arial,sans-serif" fill="#203a2f" font-size="18"><text x="41" y="343">Arrival</text><text x="331" y="158">A resting point</text><text x="275" y="241">Information</text><text x="433" y="279" fill="#994324" font-weight="700">Route A</text><text x="437" y="378" font-weight="700">Route B</text><text x="745" y="392">A step?</text><path d="M740 376 L711 327" stroke="#203a2f" stroke-width="2" fill="none"/></g>
+<g font-family="Arial,sans-serif" fill="#203a2f" font-size="17"><text x="45" y="491">What can the drawing show?</text><text x="45" y="522">Route · pause · boundary</text><text x="500" y="491">What would need checking?</text><text x="500" y="522">Surface · permission · actual access</text></g>
+</svg>
