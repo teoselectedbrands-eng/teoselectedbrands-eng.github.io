@@ -1,0 +1,356 @@
+{
+  "status": "programmes_in_preparation",
+  "programmes": [
+    {
+      "id": "WS-001",
+      "title": "Below the Surface",
+      "kind": "workshop",
+      "route": "/workshops/#below-the-surface",
+      "availability": "in_development",
+      "bookable": false
+    },
+    {
+      "id": "WS-002",
+      "title": "Behind the Hill",
+      "kind": "workshop",
+      "route": "/workshops/#behind-the-hill",
+      "availability": "in_development",
+      "bookable": false
+    },
+    {
+      "id": "WS-003",
+      "title": "Movement, Space & City",
+      "kind": "workshop",
+      "route": "/workshops/#movement-space-city",
+      "availability": "in_development",
+      "bookable": false
+    },
+    {
+      "id": "WS-004",
+      "title": "Soft Social",
+      "kind": "workshop",
+      "route": "/workshops/#soft-social",
+      "availability": "in_development",
+      "bookable": false
+    },
+    {
+      "id": "WS-005",
+      "title": "Changing the Rules",
+      "kind": "workshop",
+      "route": "/workshops/#changing-the-rules",
+      "availability": "in_development",
+      "bookable": false
+    },
+    {
+      "id": "WS-006",
+      "title": "A Classroom That Moves",
+      "kind": "workshop",
+      "route": "/workshops/#classroom-that-moves",
+      "availability": "in_development",
+      "bookable": false
+    },
+    {
+      "id": "CL-001",
+      "title": "Pilates & Control",
+      "kind": "class",
+      "route": "/classes/#pilates-control",
+      "availability": "in_development",
+      "bookable": false
+    },
+    {
+      "id": "CL-002",
+      "title": "Calisthenics Foundations",
+      "kind": "class",
+      "route": "/classes/#calisthenics-foundations",
+      "availability": "in_development",
+      "bookable": false
+    },
+    {
+      "id": "CL-003",
+      "title": "Rhythm & Movement",
+      "kind": "class",
+      "route": "/classes/#rhythm-movement",
+      "availability": "in_development",
+      "bookable": false
+    },
+    {
+      "id": "CL-004",
+      "title": "Mobility Explorer",
+      "kind": "class",
+      "route": "/classes/#mobility-explorer",
+      "availability": "in_development",
+      "bookable": false
+    },
+    {
+      "id": "CL-005",
+      "title": "Play & Cooperation",
+      "kind": "class",
+      "route": "/classes/#play-cooperation",
+      "availability": "in_development",
+      "bookable": false
+    },
+    {
+      "id": "CL-006",
+      "title": "Strength for Daily Life",
+      "kind": "class",
+      "route": "/classes/#strength-for-daily-life",
+      "availability": "in_development",
+      "bookable": false
+    },
+    {
+      "id": "CL-007",
+      "title": "Moving Together",
+      "kind": "class",
+      "route": "/classes/#moving-together",
+      "availability": "in_development",
+      "bookable": false
+    },
+    {
+      "id": "CL-008",
+      "title": "Outdoor Movement Atlas",
+      "kind": "class",
+      "route": "/classes/#outdoor-movement-atlas",
+      "availability": "in_development",
+      "bookable": false
+    },
+    {
+      "id": "CL-009",
+      "title": "Balance & Play",
+      "kind": "class",
+      "route": "/classes/#balance-play",
+      "availability": "in_development",
+      "bookable": false
+    },
+    {
+      "id": "CL-010",
+      "title": "Movement Stories for Families",
+      "kind": "class",
+      "route": "/classes/#movement-stories-for-families",
+      "availability": "in_development",
+      "bookable": false
+    },
+    {
+      "id": "LEARN-001",
+      "title": "See Before You Explain",
+      "kind": "course",
+      "route": "/learn/learn-001/",
+      "availability": "in_development",
+      "bookable": false
+    },
+    {
+      "id": "LEARN-002",
+      "title": "A Movement in Context",
+      "kind": "course",
+      "route": "/learn/learn-002/",
+      "availability": "in_development",
+      "bookable": false
+    },
+    {
+      "id": "AETH-CLASS-006",
+      "title": "Sport Skills Lab",
+      "kind": "class",
+      "route": "/classes/#sport-skills-lab",
+      "availability": "in_development",
+      "bookable": false
+    },
+    {
+      "id": "AETH-WS-READING-ROOM",
+      "title": "The Movement Reading Room",
+      "kind": "workshop",
+      "route": "/workshops/#movement-reading-room",
+      "availability": "in_development",
+      "bookable": false
+    },
+    {
+      "id": "LEARN-003",
+      "title": "Context, Questions & Better Judgement",
+      "kind": "course",
+      "route": "/learn/academy/#learn-003",
+      "availability": "outline_only",
+      "bookable": false
+    },
+    {
+      "id": "LEARN-004",
+      "title": "Patterns Without Certainty",
+      "kind": "course",
+      "route": "/learn/academy/#learn-004",
+      "availability": "outline_only",
+      "bookable": false
+    },
+    {
+      "id": "LEARN-005",
+      "title": "Everyday Strength as Capability",
+      "kind": "course",
+      "route": "/learn/academy/#learn-005",
+      "availability": "outline_only",
+      "bookable": false
+    },
+    {
+      "id": "LEARN-006",
+      "title": "Balance, Flow & Transitions",
+      "kind": "course",
+      "route": "/learn/academy/#learn-006",
+      "availability": "outline_only",
+      "bookable": false
+    },
+    {
+      "id": "LEARN-007",
+      "title": "Routes, Access & Choice",
+      "kind": "course",
+      "route": "/learn/academy/#learn-007",
+      "availability": "outline_only",
+      "bookable": false
+    },
+    {
+      "id": "LEARN-008",
+      "title": "Objects That Change Activity",
+      "kind": "course",
+      "route": "/learn/academy/#learn-008",
+      "availability": "outline_only",
+      "bookable": false
+    },
+    {
+      "id": "LEARN-009",
+      "title": "Public Space as a Learning Field",
+      "kind": "course",
+      "route": "/learn/academy/#learn-009",
+      "availability": "outline_only",
+      "bookable": false
+    },
+    {
+      "id": "LEARN-010",
+      "title": "Rules Create Possibilities",
+      "kind": "course",
+      "route": "/learn/academy/#learn-010",
+      "availability": "outline_only",
+      "bookable": false
+    },
+    {
+      "id": "LEARN-011",
+      "title": "Groups, Roles & Shared Attention",
+      "kind": "course",
+      "route": "/learn/academy/#learn-011",
+      "availability": "outline_only",
+      "bookable": false
+    },
+    {
+      "id": "LEARN-012",
+      "title": "Creative Cooperation",
+      "kind": "course",
+      "route": "/learn/academy/#learn-012",
+      "availability": "outline_only",
+      "bookable": false
+    },
+    {
+      "id": "LEARN-013",
+      "title": "Sport Beyond Competition",
+      "kind": "course",
+      "route": "/learn/academy/#learn-013",
+      "availability": "outline_only",
+      "bookable": false
+    },
+    {
+      "id": "LEARN-014",
+      "title": "Rhythm, Dance & Expression",
+      "kind": "course",
+      "route": "/learn/academy/#learn-014",
+      "availability": "outline_only",
+      "bookable": false
+    },
+    {
+      "id": "LEARN-015",
+      "title": "Learning How to Train",
+      "kind": "course",
+      "route": "/learn/academy/#learn-015",
+      "availability": "outline_only",
+      "bookable": false
+    },
+    {
+      "id": "LEARN-016",
+      "title": "Five-Minute Classroom Movement",
+      "kind": "course",
+      "route": "/learn/academy/#learn-016",
+      "availability": "outline_only",
+      "bookable": false
+    },
+    {
+      "id": "LEARN-017",
+      "title": "Play at Home and Together",
+      "kind": "course",
+      "route": "/learn/academy/#learn-017",
+      "availability": "outline_only",
+      "bookable": false
+    },
+    {
+      "id": "LEARN-018",
+      "title": "Educator Movement Lab",
+      "kind": "course",
+      "route": "/learn/academy/#learn-018",
+      "availability": "outline_only",
+      "bookable": false
+    },
+    {
+      "id": "LEARN-019",
+      "title": "How a Workshop Works",
+      "kind": "course",
+      "route": "/learn/academy/#learn-019",
+      "availability": "outline_only",
+      "bookable": false
+    },
+    {
+      "id": "LEARN-020",
+      "title": "Hosting Accessible Groups",
+      "kind": "course",
+      "route": "/learn/academy/#learn-020",
+      "availability": "outline_only",
+      "bookable": false
+    },
+    {
+      "id": "LEARN-021",
+      "title": "Community Projects from Small Beginnings",
+      "kind": "course",
+      "route": "/learn/academy/#learn-021",
+      "availability": "outline_only",
+      "bookable": false
+    }
+  ],
+  "event_previews": [
+    {
+      "id": "EVP-001",
+      "route": "/events/#under-the-surface-live",
+      "programme_id": "WS-001",
+      "status": "in_preparation"
+    },
+    {
+      "id": "EVP-002",
+      "route": "/events/#movement-atlas-walk",
+      "programme_id": "WS-003",
+      "status": "in_preparation"
+    },
+    {
+      "id": "EVP-003",
+      "route": "/events/#movement-discovery-day",
+      "programme_id": "SER-001",
+      "status": "in_preparation"
+    },
+    {
+      "id": "EVP-004",
+      "route": "/events/#classroom-that-moves",
+      "programme_id": "WS-006",
+      "status": "in_preparation"
+    },
+    {
+      "id": "EVP-005",
+      "route": "/events/#see-before-you-explain-circle",
+      "programme_id": "LEARN-001",
+      "status": "in_preparation"
+    },
+    {
+      "id": "EVP-006",
+      "route": "/events/#community-play-day",
+      "programme_id": "WS-005",
+      "status": "in_preparation"
+    }
+  ],
+  "scheduled_occurrences": []
+}
