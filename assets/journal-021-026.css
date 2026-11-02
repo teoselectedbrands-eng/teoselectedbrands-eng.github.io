@@ -1,0 +1,38 @@
+
+/* AJ 021–026 modular, scoped publication stylesheet. Zero changes to existing site CSS. */
+:root{color-scheme:light;--aj-ink:#1b2927;--aj-bg:#f8f5ed;--aj-border:#d8dfda;--aj-green:#174e44;--aj-accent:#d46b45;--aj-focus:#1257d5}
+*{box-sizing:border-box}
+body.aj-body{margin:0;background:var(--aj-bg);color:var(--aj-ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.58}
+.aj-skip{position:absolute;left:12px;top:-100px;padding:12px 14px;background:white;z-index:100}
+.aj-skip:focus{top:12px}
+.aj-header{background:#162e2a;color:white;padding:14px max(20px,calc((100vw - 1120px)/2));display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px}
+.aj-logo{color:#fff;text-decoration:none;font-weight:800;letter-spacing:.1em;font-size:1rem}
+.aj-global{display:flex;flex-wrap:wrap;gap:12px}.aj-global a{color:#e6f2e7;text-decoration:underline;text-underline-offset:3px}
+.aj-shell{max-width:1100px;margin:auto;padding:26px 20px 70px}
+.aj-hero{padding:26px 0 22px}.aj-kicker{text-transform:uppercase;letter-spacing:.1em;font-size:.76rem;font-weight:800;color:#43665d}
+.aj-hero h1,.aj-body .aj-story h1{font-family:Georgia,"Times New Roman",serif;line-height:1.12;font-weight:700;letter-spacing:-.025em;font-size:clamp(2rem,5vw,3.8rem);max-width:850px;margin:12px 0}
+.aj-intro{max-width:72ch;color:#345047;font-size:1.08rem}
+.aj-breadcrumbs{display:flex;gap:7px;flex-wrap:wrap;font-size:.91rem;color:#54675e}.aj-breadcrumbs a{color:var(--aj-green)}
+.aj-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:22px 0 46px}
+.aj-card{display:flex;flex-direction:column;border:1px solid var(--aj-border);border-radius:19px;overflow:hidden;background:white;color:var(--aj-ink);text-decoration:none;min-width:0;box-shadow:0 2px 8px #10282009;transition:transform .16s ease}
+.aj-card:hover{transform:translateY(-3px)}.aj-card img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;background:#ced7d0}
+.aj-card-copy{padding:16px}.aj-card h2,.aj-card h3{line-height:1.25;margin:7px 0;font-size:1.18rem}.aj-card p{margin:6px 0 0;font-size:.91rem;color:#52655f}
+.aj-pill{display:inline-block;border-radius:99px;padding:3px 10px;background:#e6f3e9;color:#174e44;font-size:.73rem;font-weight:750}
+.aj-fiction{background:#f1e4f6;color:#633571}
+.aj-category{position:relative}.aj-category img{aspect-ratio:1.6/1}.aj-section-title{font-family:Georgia,serif;font-size:1.65rem;margin-top:35px}
+.aj-pair{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.aj-story{max-width:780px;margin:0 auto}.aj-story>.aj-cover{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover;border-radius:20px;border:1px solid var(--aj-border);background:#d0dedb;margin:20px 0 18px}
+.aj-story>h1{margin-top:4px}.aj-story-prose{font-size:1.075rem;line-height:1.77;overflow-wrap:anywhere}
+.aj-story-prose h2{font-family:Georgia,serif;font-size:1.55rem;line-height:1.24;margin-top:36px}
+.aj-story-prose h3{font-size:1.2rem;margin-top:28px}.aj-story-prose a{color:#14594d;text-underline-offset:3px}
+.aj-story-prose table{width:100%;border-collapse:collapse;display:block;overflow-x:auto;font-size:.96rem}
+.aj-story-prose td,.aj-story-prose th{border-bottom:1px solid var(--aj-border);padding:10px;text-align:left}
+.aj-story-prose blockquote{border-left:4px solid #6da293;padding:4px 18px;margin:22px 0;background:#eaf3ed}
+.aj-related{border-top:1px solid var(--aj-border);padding-top:25px;margin-top:45px}.aj-related a{color:#175e50}
+.aj-note{padding:13px 17px;border-radius:12px;background:#fff6e7;border-left:4px solid #bc7248;font-size:.95rem;margin:16px 0}
+.aj-footer{border-top:1px solid var(--aj-border);padding:28px 20px;text-align:center;font-size:.9rem;color:#456056}
+.aj-meta{color:#4c635c;font-size:.88rem}.aj-divider{border:0;border-top:1px solid var(--aj-border);margin:24px 0}
+.aj-card:focus-visible,.aj-body a:focus-visible,.aj-body button:focus-visible{outline:3px solid var(--aj-focus);outline-offset:4px}
+@media(max-width:850px){.aj-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:550px){.aj-grid,.aj-pair{grid-template-columns:1fr}.aj-header{padding:14px 18px}.aj-shell{padding:18px 16px 58px}.aj-story-prose{font-size:1rem}.aj-card img{aspect-ratio:16/9}}
+@media(prefers-reduced-motion:reduce){.aj-card{transition:none}.aj-card:hover{transform:none}}
