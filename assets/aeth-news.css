@@ -36,3 +36,21 @@
     border: 2px solid currentColor;
   }
 }
+
+.an-reports {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+}
+
+.an-reports h3 {
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.an-article {
+  max-width: 48rem;
+}
+
+.an-article h1 {
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  overflow-wrap: anywhere;
+}
