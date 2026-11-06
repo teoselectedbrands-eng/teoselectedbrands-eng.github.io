@@ -177,6 +177,12 @@
   margin-top: 0;
 }
 
+.an-reports .an-report-date {
+  margin: 0 0 8px;
+  color: #394b43;
+  font-size: .88rem;
+}
+
 .an-story-copy p:last-child {
   margin-bottom: 0;
 }
