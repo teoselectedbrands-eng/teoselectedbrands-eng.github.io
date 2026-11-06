@@ -1,0 +1,236 @@
+.an-visual-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.an-visual-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  object-fit: contain;
+}
+
+.an-visual-art--hubble {
+  background: #15141b;
+}
+
+.an-visual-art--lab {
+  background: #153d37;
+  padding: 5%;
+}
+
+.an-visual-art--ozone {
+  gap: 5%;
+  padding: 4%;
+  background: white;
+}
+
+.an-visual-art--ozone img {
+  width: 58%;
+}
+
+.an-visual-art--ozone span {
+  display: grid;
+  gap: 4px;
+  color: #183d37;
+  line-height: 1.15;
+}
+
+.an-visual-art--ozone strong {
+  font-size: clamp(1.05rem, 2.3vw, 1.65rem);
+}
+
+.an-visual-art--ozone small {
+  font-size: .69rem;
+  font-weight: 760;
+  letter-spacing: .1em;
+}
+
+.an-visual-art--activity {
+  display: grid;
+  align-content: center;
+  justify-items: stretch;
+  gap: 12px;
+  padding: 6% 8%;
+  min-height: 10rem;
+  color: #153d37;
+  background: #dcece4;
+}
+
+.an-activity-stat {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 1.18;
+}
+
+.an-activity-stat strong {
+  font-size: clamp(1.55rem, 4vw, 2.45rem);
+  white-space: nowrap;
+  letter-spacing: -.05em;
+}
+
+.an-activity-stat span {
+  font-size: clamp(.72rem, 1.3vw, .91rem);
+}
+
+.an-activity-bars {
+  display: grid;
+  gap: 6px;
+  font-size: .76rem;
+}
+
+.an-activity-row {
+  display: grid;
+  grid-template-columns: 2.35rem 1fr 2.5rem;
+  align-items: center;
+  gap: 7px;
+}
+
+.an-activity-track,
+.an-activity-fill {
+  display: block;
+  height: 9px;
+  border-radius: 12px;
+}
+
+.an-activity-track {
+  background: #f8fbf8;
+}
+
+.an-activity-fill {
+  background: #276454;
+}
+
+.an-activity-axis {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 calc(2.5rem + 7px) 0 calc(2.35rem + 7px);
+  font-size: .67rem;
+}
+
+.an-article .an-visual-figure {
+  max-width: 40rem;
+  margin: 20px 0 22px;
+}
+
+.an-visual-figure .an-visual-art {
+  border: 1px solid var(--an-line);
+  border-radius: 14px;
+}
+
+.an-visual-figure figcaption {
+  margin-top: 8px;
+  color: #394b43;
+  font-size: .88rem;
+  overflow-wrap: anywhere;
+}
+
+@media (prefers-contrast: more) {
+  .an-visual-figure .an-visual-art {
+    border-color: currentColor;
+  }
+}
+
+@media (forced-colors: active) {
+  .an-activity-track {
+    outline: 1px solid CanvasText;
+  }
+
+  .an-activity-fill {
+    background: CanvasText;
+    forced-color-adjust: none;
+  }
+}
+
+/* Illustrated News covers and the source figures linked from reports. */
+.an-reports > .an-story-card {
+  position: relative;
+  min-width: 0;
+  padding: 0;
+  border-radius: 0 0 14px 14px;
+  border-right: 1px solid var(--an-line);
+  border-bottom: 1px solid var(--an-line);
+  border-left: 1px solid var(--an-line);
+}
+
+.an-story-cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: #e4ece6;
+}
+
+.an-story-copy {
+  padding: 17px 20px 21px;
+}
+
+.an-story-copy .an-overline {
+  margin-top: 0;
+}
+
+.an-story-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.an-story-copy h3 a::after {
+  position: absolute;
+  inset: 0 0 auto;
+  aspect-ratio: 16 / 10;
+  content: "";
+}
+
+.an-article .an-story-figure {
+  max-width: 44rem;
+  margin: 20px 0 24px;
+}
+
+.an-story-figure .an-story-cover {
+  border-radius: 12px;
+}
+
+.an-story-figure figcaption {
+  margin-top: 8px;
+  color: #394b43;
+  font-size: .88rem;
+}
+
+.an-story-source {
+  max-width: 40rem;
+  margin: 22px 0 28px;
+  border: 1px solid var(--an-line);
+  border-radius: 10px;
+  background: white;
+}
+
+.an-story-source summary {
+  min-height: 44px;
+  padding: 11px 15px;
+  color: #15594b;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.an-story-source summary:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 2px;
+}
+
+.an-story-source .an-visual-figure {
+  margin: 0 14px 14px;
+}
+
+@media (prefers-contrast: more) {
+  .an-reports > .an-story-card,
+  .an-story-source {
+    border-color: currentColor;
+  }
+}
