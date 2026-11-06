@@ -1,0 +1,101 @@
+{
+  "spec": "AET-ED4-DISCOVER-007",
+  "editorial_status": "Public factual source register; not an availability feed",
+  "source_checked_on": "2026-11-06",
+  "time_zone": "Asia/Beirut",
+  "status_method": "Client-side calendar comparison, not network verification",
+  "source_of_truth": "Original organisers",
+  "refresh_rule": "Verify before milestones and when substantive changes are reported",
+  "stories": [
+    {
+      "id": "EV-001",
+      "article": "/discover/arts/mare-nostrum-sursock/",
+      "kind": "exhibition",
+      "start_date": "2026-11-06",
+      "end_date": "2027-02-21",
+      "original_source": "https://sursock.museum/content/mare-nostrum-lily-abichahine",
+      "source_checked_on": "2026-11-06",
+      "limitations": "Does not confirm admission, rescheduling, cancellation or live operations"
+    },
+    {
+      "id": "EV-002",
+      "article": "/discover/lebanon/ashkal-afteruse-exhibition/",
+      "kind": "exhibition",
+      "start_date": "2026-10-16",
+      "end_date": "2027-01-15",
+      "original_source": "https://ashkalalwan.org/program.php?category=4&id=550",
+      "source_checked_on": "2026-11-06",
+      "limitations": "Does not confirm admission, rescheduling, cancellation or live operations"
+    },
+    {
+      "id": "EV-003",
+      "article": "/discover/lebanon/sursock-becoming-icon/",
+      "kind": "exhibition",
+      "start_date": "2025-07-17",
+      "end_date": "2027-06-20",
+      "original_source": "https://sursock.museum/content/becoming-icon?page=0",
+      "source_checked_on": "2026-11-06",
+      "limitations": "Does not confirm admission, rescheduling, cancellation or live operations"
+    },
+    {
+      "id": "EV-004",
+      "article": "/discover/lebanon/lau-human-side-ai-2026/",
+      "kind": "single",
+      "start_date": "2026-11-11",
+      "end_date": "2026-11-11",
+      "original_source": "https://eventscal.lau.edu.lb/event.php?evt=20261020_omnicom-day-x-lau-the-human-side",
+      "source_checked_on": "2026-11-06",
+      "limitations": "Does not confirm admission, rescheduling, cancellation or live operations"
+    },
+    {
+      "id": "EV-005",
+      "article": "/discover/arts/joy-of-becoming-beirut/",
+      "kind": "exhibition",
+      "start_date": "2026-11-12",
+      "end_date": "2027-02-12",
+      "original_source": "https://beirutartcenter.org/event/mohamad-kanaan-the-joy-of-becoming/",
+      "source_checked_on": "2026-11-06",
+      "limitations": "Does not confirm admission, rescheduling, cancellation or live operations"
+    },
+    {
+      "id": "EV-006",
+      "article": "/discover/lebanon/berytech-pitch-connect-invest-2026/",
+      "kind": "single",
+      "start_date": "2026-11-16",
+      "end_date": "2026-11-16",
+      "original_source": "https://berytech.org/events/pitch-connect-invest/",
+      "source_checked_on": "2026-11-06",
+      "limitations": "Does not confirm admission, rescheduling, cancellation or live operations"
+    },
+    {
+      "id": "EV-007",
+      "article": "/discover/lebanon/ashkal-home-workspace-2027/",
+      "kind": "deadline",
+      "start_date": "2026-11-20",
+      "end_date": "2026-11-20",
+      "original_source": "https://www.ashkalalwan.org/program.php?category=4&id=551",
+      "source_checked_on": "2026-11-06",
+      "limitations": "Does not confirm admission, rescheduling, cancellation or live operations"
+    },
+    {
+      "id": "EV-008",
+      "article": "/discover/lebanon/fall-for-print-2026/",
+      "kind": "range",
+      "start_date": "2026-11-20",
+      "end_date": "2026-11-22",
+      "original_source": "https://beirutartcenter.org/event/fall-for-print-beirut-art-book-fair/",
+      "source_checked_on": "2026-11-06",
+      "limitations": "Does not confirm admission, rescheduling, cancellation or live operations"
+    },
+    {
+      "id": "EV-009",
+      "article": "/discover/lebanon/beirut-marathon-542-community/",
+      "kind": "single",
+      "start_date": "2026-11-29",
+      "end_date": "2026-11-29",
+      "original_source": "https://www.beirutmarathon.org/542-programs.php",
+      "source_checked_on": "2026-11-06",
+      "limitations": "Does not confirm admission, rescheduling, cancellation or live operations"
+    }
+  ]
+}
