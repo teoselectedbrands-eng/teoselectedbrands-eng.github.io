@@ -20,8 +20,16 @@ body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;backgrou
     .formcard li { margin-block: 6px; }
     .formcard a { overflow-wrap: anywhere; }
     .formcard .cta { color: white; }
-  </style>
-</head>
+  
+    .enquiry-router{padding:clamp(14px,2vw,22px);background:#e9f2e9;border:1px solid #c6ddcd;border-radius:15px;margin-block:16px 18px}
+    .enquiry-router h3{font-size:1.16rem;margin:0 0 12px}
+    .enquiry-router .field{display:block;max-width:530px}
+    .enquiry-router select{display:block;width:100%;margin-top:6px;min-height:46px;font:inherit;border-radius:9px;padding:9px 12px;background:white;border:1px solid #859f8e;color:#1d3028}
+    .enquiry-router .hint{max-width:70ch}
+    .enquiry-router #enquiry-explanation{padding:12px 14px;background:#fff;border-inline-start:3px solid #35694f;border-radius:6px}
+    @media(max-width:540px){.enquiry-router{padding:14px}.enquiry-router .cta{display:inline-block;max-width:100%;overflow-wrap:anywhere}}
+</style>
+<script defer src="/assets/aetherion-enquiry-routing.js?v=20261114-b2"></script></head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header>
@@ -41,8 +49,24 @@ body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;backgrou
 
     <section class="formcard" id="contact" aria-labelledby="contact-heading">
       <h2 id="contact-heading">Contact Aetherion</h2>
-      <p><a class="cta" href="mailto:hello@aetherionmovement.com" aria-describedby="email-help">Email Aetherion</a></p>
-      <p class="hint" id="email-help">Opens a draft to hello@aetherionmovement.com in your email app. Write and send it when you are ready.</p>
+      <div class="enquiry-router" aria-labelledby="enquiry-router-heading">
+        <h3 id="enquiry-router-heading">Choose what you want to ask</h3>
+        <label class="field" for="enquiry-topic">Type of enquiry
+          <select id="enquiry-topic">
+            <option value="general">General question</option>
+            <option value="learning">Free learning resources</option>
+            <option value="movement">Movement or future class formats</option>
+            <option value="workshop">Workshop or community encounter</option>
+            <option value="professional">Professional care pathway</option>
+            <option value="partnership">School or organisation partnership</option>
+            <option value="accessibility">Accessibility and privacy</option>
+            <option value="editorial">News and Journal</option>
+          </select>
+        </label>
+        <p id="enquiry-explanation" class="hint" role="status" aria-live="polite">This opens a draft in your own email application. An enquiry is not a confirmed appointment, admission or booking.</p>
+        <p><a class="cta" id="enquiry-compose" href="mailto:hello@aetherionmovement.com" aria-describedby="email-help enquiry-explanation">Email Aetherion</a></p>
+        <p class="hint" id="email-help">Opens your email application; you choose whether to send. We do not collect or save your selection here, and sending an email does not confirm a booking.</p>
+      </div>
       <details>
         <summary>Choose a topic (optional)</summary>
         <ul>
