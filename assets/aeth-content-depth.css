@@ -31,3 +31,10 @@
 @media(max-width:900px){.adp-grid,.adp-grid.four,.adp-collections{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:590px){.adp-grid,.adp-grid.four,.adp-collections,.adp-facts{grid-template-columns:1fr}.adp-card img{height:230px}}
 @media print{.adp-grid,.adp-facts,.adp-collections{grid-template-columns:1fr}.adp-card{break-inside:avoid}}
+
+.adp-hero-collage{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0;min-width:0;align-items:stretch;overflow:hidden;border-radius:19px;position:relative}
+.adp-hero-collage a{min-width:0;position:relative;overflow:hidden;display:block;border-radius:12px;background:#dce9d5}
+.adp-hero-collage a img{display:block;width:100%;height:clamp(210px,29vw,365px);object-fit:cover}
+.adp-hero-collage a span{position:absolute;inset:auto 0 0;padding:23px 8px 10px;color:white;background:linear-gradient(transparent,#102d24dd);font-size:.82rem;text-align:center;font-weight:800}
+.adp-hero-collage figcaption{grid-column:1/-1;font-size:.75rem;color:#426353;line-height:1.5}
+@media(max-width:580px){.adp-hero-collage a img{height:190px}}
