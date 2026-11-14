@@ -1,0 +1,33 @@
+name: Aetherion Four Guided Labs QA (review only)
+on:
+  push:
+    branches:
+      - 'review/aetherion-tracks03-04-bridged-labs-*'
+    paths:
+      - 'learn/field-labs/**'
+      - 'learn/learn-001/field-lab/**'
+      - 'learn/learn-002/field-lab/**'
+      - 'assets/aeth-scenarios.css'
+      - 'qa/aetherion-four-labs.mjs'
+      - '.github/workflows/aetherion-four-labs.yml'
+  pull_request:
+    paths:
+      - 'learn/field-labs/**'
+      - 'learn/learn-001/field-lab/**'
+      - 'learn/learn-002/field-lab/**'
+      - 'assets/aeth-scenarios.css'
+      - 'qa/aetherion-four-labs.mjs'
+      - '.github/workflows/aetherion-four-labs.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  four-lab-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify four-stage content and links
+        run: node qa/aetherion-four-labs.mjs
