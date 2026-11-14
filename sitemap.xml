@@ -94,4 +94,21 @@
   <url><loc>https://aetherionmovement.com/resources/field-notes/stroke-awareness-daily-life/</loc></url>
   <url><loc>https://aetherionmovement.com/resources/field-notes/understanding-chronic-conditions/</loc></url>
   <url><loc>https://aetherionmovement.com/resources/field-notes/volunteering-idea-to-action/</loc></url>
+
+  <!-- AETHERION NEWS RELEASE 001: public indexable canonical routes; update lastmod if release date changes -->
+  <url><loc>https://aetherionmovement.com/news/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://aetherionmovement.com/news/discovery/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://aetherionmovement.com/news/library/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://aetherionmovement.com/news/topics/science-discovery/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://aetherionmovement.com/news/topics/movement-sport/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://aetherionmovement.com/news/topics/technology-ai/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://aetherionmovement.com/news/topics/world-society/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://aetherionmovement.com/news/topics/health-humanity/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://aetherionmovement.com/news/reports/basal-ganglia-cell-atlas-2026/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://aetherionmovement.com/news/reports/who-teen-physical-activity-2026/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://aetherionmovement.com/news/reports/who-wearables-population-monitoring-2026/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://aetherionmovement.com/news/reports/who-europe-healthy-ageing-strategy-2026/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://aetherionmovement.com/news/reports/who-community-mental-health-transition-2026/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://aetherionmovement.com/journal/the-distance-between-wanting-and-doing/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://aetherionmovement.com/journal/a-place-that-invites-movement/</loc><lastmod>2026-11-14</lastmod></url>
 </urlset>
