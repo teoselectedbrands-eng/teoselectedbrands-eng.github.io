@@ -1,0 +1,31 @@
+/* Aetherion field pathways, review candidate 2026-11-14.
+   Scoped to additive learning / practice / event / professional route modules. */
+.aeth-path{--ap-ink:#183d36;--ap-muted:#47665f;--ap-border:#cbded0;position:relative;margin:26px 0 42px;padding:clamp(22px,3.5vw,40px);border:1px solid var(--ap-border);border-radius:20px;background:linear-gradient(130deg,#eaf3e9,#f8f7ec);color:var(--ap-ink);overflow-wrap:anywhere}
+.aeth-path *{box-sizing:border-box}
+.aeth-path .ap-label{font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#427266}
+.aeth-path h2{font:700 clamp(1.75rem,3vw,2.65rem)/1.16 Georgia,serif;letter-spacing:-.035em;margin:12px 0 12px;color:var(--ap-ink)}
+.aeth-path h3{font:700 clamp(1.18rem,1.8vw,1.45rem)/1.25 Georgia,serif;margin:8px 0 10px;color:var(--ap-ink)}
+.aeth-path p{max-width:75ch;color:#3a5750;margin:8px 0 15px;line-height:1.7}
+.aeth-path .ap-lead{font-size:1.04rem;max-width:75ch}
+.aeth-path .ap-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:22px 0 10px}
+.aeth-path .ap-grid.ap-grid-four{grid-template-columns:repeat(4,minmax(0,1fr))}
+.aeth-path .ap-card{background:#fff;border:1px solid #d6e3da;border-radius:14px;padding:18px;min-width:0;display:flex;flex-direction:column;align-items:flex-start}
+.aeth-path .ap-card:nth-child(3n+2){background:#f3f7f1}
+.aeth-path .ap-index{display:block;font:700 1.9rem Georgia,serif;color:#6c9983}
+.aeth-path .ap-card p{font-size:.93rem;line-height:1.6}
+.aeth-path .ap-card a{font-weight:700;font-size:.93rem;color:#185c4e;margin-top:auto;text-decoration:underline;text-underline-offset:3px}
+.aeth-path .ap-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:24px;counter-reset:apsteps}
+.aeth-path .ap-step{padding:17px 18px;border-radius:12px;background:#fff;border:1px solid #d6e3da}
+.aeth-path .ap-step strong{display:block;margin-bottom:7px}
+.aeth-path .ap-step p{font-size:.91rem}
+.aeth-path .ap-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.aeth-path .ap-button{border-radius:999px;background:#215b50;color:#fff;text-decoration:none;font-weight:750;padding:11px 17px;display:inline-block}
+.aeth-path .ap-button:visited{color:#fff}
+.aeth-path .ap-button.secondary{background:transparent;color:#215b50;border:1px solid #6d9d8b}
+.aeth-path .ap-note{margin-top:20px;padding:12px 16px;border-inline-start:3px solid #9cbcae;font-size:.88rem;background:#ffffffa8;color:#44655c}
+.aeth-path details{margin:14px 0;background:#fff;border:1px solid #d5e2d7;border-radius:12px;padding:14px 17px}
+.aeth-path summary{cursor:pointer;font-weight:750}
+.aeth-path a:focus-visible,.aeth-path summary:focus-visible{outline:3px solid #ba7818;outline-offset:4px}
+@media(max-width:850px){.aeth-path .ap-grid.ap-grid-four{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.aeth-path{padding:20px;margin:20px 0 32px}.aeth-path .ap-grid,.aeth-path .ap-grid.ap-grid-four,.aeth-path .ap-steps{grid-template-columns:1fr}.aeth-path .ap-links{flex-direction:column;align-items:stretch}.aeth-path .ap-button{text-align:center}}
+@media(prefers-reduced-motion:reduce){.aeth-path *{scroll-behavior:auto}}
