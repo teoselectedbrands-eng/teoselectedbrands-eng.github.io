@@ -1,0 +1,46 @@
+name: Aetherion Contact Batch 2 QA (review only)
+on:
+  push:
+    branches:
+      - review/aetherion-batch2-central-contact-20261114
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: aetherion-enquiry-batch2-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  browser-test:
+    name: Help routing, source pages and responsive Chromium checks — no deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout exact branch
+        uses: actions/checkout@v4
+      - name: Install Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save --no-package-lock --ignore-scripts playwright@1.56.0
+          npx playwright install chromium --with-deps
+      - name: Serve actual branch HTML on localhost
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/batch2-http.log 2>&1 &
+          for attempt in $(seq 1 15); do
+            if curl --fail --silent -o /dev/null http://127.0.0.1:8765/help/; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/batch2-http.log
+          exit 1
+      - name: Run central enquiry journey QA
+        run: node qa/aetherion-batch2-contact.mjs
+      - name: Save audit snapshots and results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: aetherion-batch2-contact-${{ github.sha }}
+          path: qa/artifacts-batch2/
+          if-no-files-found: warn
+          retention-days: 14
