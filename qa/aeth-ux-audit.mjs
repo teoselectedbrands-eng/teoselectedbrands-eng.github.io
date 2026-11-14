@@ -34,7 +34,7 @@ ck('Workshop card canonical links', (wk.match(/class="ws15-direct"/g)||[]).lengt
 ck('Workshop counts not displayed',!wk.includes('72 workshop topics')&&!wk.includes('Explore all 72'));
 ck('Homepage new hero',home.includes('id="home16-title"'));
 ck('Homepage no unrelated astronomy feature',!home.includes('/journal/why-the-night-sky-shows-us-different-moments-in-time/'));
-ck('Movement practical gallery',move.includes('id="movement-in-context"'));
+ck('Movement explains practical methods',move.includes('id="practice"')&&move.includes('/classes/pilates/')&&move.includes('id="outdoor"'));
 ck('Classes practical gallery',cls.includes('id="practice-gallery"'));
 ck('Learning science entry',lrn.includes('id="learning-domains"'));
 ck('Journal life-context entry',jrn.includes('id="journal-collections"'));
