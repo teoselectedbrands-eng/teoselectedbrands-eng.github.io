@@ -64,6 +64,10 @@ try{
  await page.locator('.atx-card a[href^="/workshops/topics/"]').first().click();
  ck('Schools index to individual topic',new URL(page.url()).pathname.startsWith('/workshops/topics/'));
  await page.goto(root+'/workshops/',{waitUntil:'networkidle'});
+ const searchLink=page.locator('#ws11-all');
+ await searchLink.click();
+ ck('Workshop library quick link expands archive',await page.locator('#workshop-catalogue').evaluate(el=>el.open));
+ await page.goto(root+'/workshops/',{waitUntil:'networkidle'});
  const details=page.locator('#workshop-catalogue');
  ck('Archive collapsed on entry',!(await details.getAttribute('open')));
  await details.locator(':scope > summary').click();
