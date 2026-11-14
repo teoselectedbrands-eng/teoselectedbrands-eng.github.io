@@ -13,6 +13,7 @@
 .aeth-lab .fac-steps li:before{content:counter(fac,decimal-leading-zero);font-size:1.25rem;font-weight:800;color:#295e43}
 .aeth-lab .fac-steps strong{display:block}
 .aeth-lab .fac-steps p{margin:3px 0 0}
+.aeth-lab .lab-matrix thead th{background-color:#e4eee3;color:#173528}
 .aeth-lab .fac-glossary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
 .aeth-lab .fac-term{background:#fff;border:1px solid #c6d8c7;border-radius:15px;padding:16px;min-width:0}
 .aeth-lab .fac-term dt{font-weight:850;font-size:1rem;color:#214e38}
