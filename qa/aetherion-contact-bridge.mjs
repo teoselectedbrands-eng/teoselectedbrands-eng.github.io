@@ -42,13 +42,21 @@ const pages=[
  {url:'/professional-services/',target:'/help/?topic=professional#contact'}
 ];
 for(const p of pages){
-const page=await browser.newPage({viewport:{width:390,height:844}});
-const res=await page.goto(root+p.url,{waitUntil:'networkidle'});
-test(p.url+' HTTP 200',res.status()===200,res.status());
-test(p.url+' contains correct bridge',(await page.locator('a[href="'+p.target+'"]').count())===1);
-test(p.url+' bridge opens Help route',await page.locator('a[href="'+p.target+'"]').first().getAttribute('href')===p.target);
-test(p.url+' no forms',(await page.locator('form').count())===0);
-await page.close();
+  for(const width of [320,390,768,1280]){
+    const page=await browser.newPage({viewport:{width,height:width<400?844:850},reducedMotion:'reduce'});
+    const errors=[];page.on('pageerror',error=>errors.push(error.message));
+    const res=await page.goto(root+p.url,{waitUntil:'networkidle'});
+    test(p.url+' '+width+' HTTP 200',res.status()===200,res.status());
+    test(p.url+' '+width+' contains correct bridge',(await page.locator('a[href="'+p.target+'"]').count())===1);
+    const offset=await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth);
+    test(p.url+' '+width+' no horizontal overflow',offset<=2,offset);
+    test(p.url+' '+width+' no forms',(await page.locator('form').count())===0);
+    test(p.url+' '+width+' no script errors',errors.length===0,errors);
+    await page.locator('a[href="'+p.target+'"]').click();
+    test(p.url+' '+width+' opens requested Help route',new URL(page.url()).pathname==='/help/'&&new URL(page.url()).search===new URL(p.target,root).search,page.url());
+    test(p.url+' '+width+' selected Help guidance visible',await page.locator('#enquiry-route').isVisible());
+    await page.close();
+  }
 }
 await browser.close();
 const report={checked,passed:checked-failures.length,failed:failures.length,failures,limitations:['Tests use Chromium; not native iOS Safari/VoiceOver','No test email sent; mailbox delivery, staffing and response SLAs unverified','No public event invitations or booking slots activated']};
