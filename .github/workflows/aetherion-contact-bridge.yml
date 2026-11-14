@@ -1,0 +1,53 @@
+name: Aetherion Batch 2 Contact Handoff QA
+on:
+  push:
+    branches:
+      - main
+      - review/aetherion-batch2-contact-handoff-20261114
+    paths: &aetherion_contact_paths
+      - 'help/**'
+      - 'learn/**'
+      - 'classes/**'
+      - 'events/**'
+      - 'professional-services/**'
+      - 'assets/aeth-pathways.css'
+      - 'qa/aetherion-contact-bridge.mjs'
+      - '.github/workflows/aetherion-contact-bridge.yml'
+  pull_request:
+    branches:
+      - main
+    paths: *aetherion_contact_paths
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  contact:
+    name: Verify topic routes, privacy boundaries and mobile Help
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Chromium for QA
+        run: |
+          npm install --no-save --no-package-lock --ignore-scripts playwright@1.56.0 axe-core@4.10.3
+          npx playwright install chromium --with-deps
+      - name: Serve exact PR branch locally
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/aetherion-contact-http.log 2>&1 &
+          for n in $(seq 1 15); do
+            curl --fail --silent --output /dev/null http://127.0.0.1:8765/help/ && exit 0
+            sleep 1
+          done
+          exit 1
+      - name: Browser QA
+        run: node qa/aetherion-contact-bridge.mjs
+      - name: Keep evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: aetherion-batch2-contact-${{ github.sha }}
+          path: qa/artifacts-contact/
+          retention-days: 14

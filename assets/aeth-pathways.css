@@ -83,3 +83,11 @@
 .ap-attribution{font-size:.8rem;color:#4d665c;max-width:74ch}
 @media(max-width:800px){.intro.ap-enhanced-intro{grid-template-columns:1fr;gap:19px;padding-top:32px}.intro.ap-enhanced-intro .page-title{font-size:clamp(40px,11vw,76px)}.ap-hero-media{max-height:390px}.ap-detail-links{grid-template-columns:1fr}}
 @media(max-width:440px){.intro.ap-enhanced-intro{padding-top:24px}.ap-hero-media{border-radius:15px}.ap-lab .ap-answers{flex-direction:column;align-items:stretch}.ap-lab .ap-answers button{width:100%}}
+
+/* Batch 2: one shared, honest handoff to the central Help & Contact route. */
+.ap-enquiry-bridge{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:13px;margin:20px 0 26px;padding:17px 21px;border-radius:14px;border:1px solid #b6d2c3;background:#f2f8f2;color:#254c41}
+.ap-enquiry-bridge strong{display:block;font-size:1.02rem}
+.ap-enquiry-bridge p{font-size:.9rem;max-width:690px;margin:5px 0 0;color:#4b6a5b;line-height:1.5}
+.ap-enquiry-bridge a{display:inline-block;border:1px solid #4c806b;padding:9px 14px;border-radius:999px;color:#1e5947;text-decoration:none;font-weight:750}
+.ap-enquiry-bridge a:focus-visible{outline:3px solid #bd7d1d;outline-offset:3px}
+@media(max-width:700px){.ap-enquiry-bridge{align-items:stretch}.ap-enquiry-bridge a{width:100%;text-align:center}}
