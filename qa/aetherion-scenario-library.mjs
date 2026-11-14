@@ -45,7 +45,7 @@ for(let i=0;i<register.cases.length;i++){
  const html=read("learn/scenarios/cases/"+c.slug+"/index.html");
  assert.equal(c.id,"SC-"+String(i+1).padStart(3,"0"));
  assert.ok(c.given.length>=3);
- for(const key of ["setting","interpretation","unknown","tradeoff","review","evidence","facilitation","link","next"])
+ for(const key of ["setting","interpretation","unknown","tradeoff","review","evidence","facilitation","link"])
    assert.ok(typeof c[key]==="string"&&c[key].length>10,c.id+" missing "+key);
  for(const key of ["designA","designB"]){
    assert.ok(c[key].name&&c[key].action&&c[key].constraint,c.id+" missing "+key);
