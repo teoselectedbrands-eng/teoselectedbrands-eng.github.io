@@ -71,6 +71,35 @@ await page.goto(base+'/#/professional-services/',{waitUntil:'networkidle'});
 check('Legacy professional route is visible',await page.locator('[data-legacy-page="/professional-services/"]').isVisible());
 check('Legacy hidden sections stay hidden',(await page.locator('[data-legacy-page]:visible').count())===1);
 await page.close();
+// Internal canonical learning/report dependencies must resolve before publishing.
+const crosslinks=[
+  '/learn/learn-001/','/learn/learn-002/','/learn/academy/',
+  '/downloads/movement-field-notes.html','/downloads/see-before-you-explain.html',
+  '/news/editions/02/','/news/reports/basal-ganglia-cell-atlas-2026/',
+  '/news/reports/who-teen-physical-activity-2026/',
+  '/news/reports/who-wearables-population-monitoring-2026/',
+  '/news/reports/who-europe-healthy-ageing-strategy-2026/',
+  '/journal/a-place-that-invites-movement/',
+  '/functioning/','/living/','/workshops/','/partners/','/help/','/classes/','/events/','/professional-services/'
+];
+const linkPage=await browser.newPage();
+for(const url of crosslinks){
+  const result=await linkPage.request.get(base+url,{timeout:10000});
+  check('Internal dependency '+url+' HTTP 200',result.status()===200,result.status());
+}
+for(const url of ['/learn/','/classes/','/events/','/professional-services/']){
+  await linkPage.goto(base+url,{waitUntil:'domcontentloaded'});
+  const ref=await linkPage.evaluate(()=>{
+    const ids=[...document.querySelectorAll('[id]')].map(x=>x.id);
+    const duplicates=ids.filter((id,index)=>ids.indexOf(id)!==index);
+    const broken=[...document.querySelectorAll('main .ap-jump a[href^="#"]')]
+      .map(a=>a.getAttribute('href').slice(1)).filter(id=>!document.getElementById(id));
+    return {duplicates:[...new Set(duplicates)],broken};
+  });
+  check('No duplicate IDs on '+url,ref.duplicates.length===0,ref.duplicates);
+  check('All page index anchors resolve on '+url,ref.broken.length===0,ref.broken);
+}
+await linkPage.close();
 const bad=await browser.newPage();
 const missing=await bad.goto(base+'/missing-foundation-route-404/',{waitUntil:'domcontentloaded'});
 check('Unknown route returns 404',missing.status()===404,missing.status());
