@@ -1,0 +1,257 @@
+{
+  "schema": "aetherion-scenario-library-v1",
+  "status": "private_draft",
+  "date": "2026-11-15",
+  "labels": {
+    "given": "Given in a fictional scene, not externally verified observation",
+    "interpretation": "Interpretation or assumption, not established by the scene",
+    "proposal": "Proposed design, not a tested result",
+    "evidence": "What evidence would be needed in real use; none collected here"
+  },
+  "canonicalAcademy": {
+    "tracks": 7,
+    "concepts": 21,
+    "publicIntroductions": 2,
+    "remainingOutlines": 19
+  },
+  "cases": [
+    {
+      "id": "SC-001",
+      "slug": "the-doorway",
+      "track": 1,
+      "field": "Observation & Interpretation",
+      "focus": "observation",
+      "canonical_course": "See Before You Explain",
+      "title": "The doorway that invites a story",
+      "question": "What can be described before a motive is assigned?",
+      "setting": "A fictional corridor at a shared learning centre. Someone approaches a doorway, pauses, glances to one side and walks back.",
+      "given": [
+        "The person approached a doorway.",
+        "They paused, looked to one side and walked back.",
+        "No explanation from the person is included."
+      ],
+      "interpretation": "They must have felt unwelcome.",
+      "unknown": "Whether they changed plans, noticed a sign, heard a sound, or simply chose another route.",
+      "designA": {
+        "name": "V1 — Explain the behaviour",
+        "action": "Begin the discussion by asking participants why the person turned back.",
+        "constraint": "Questions about inner states can frame one guess as the answer."
+      },
+      "designB": {
+        "name": "V2 — Separate observation and explanation",
+        "action": "Ask for one camera-checkable statement, two possible hypotheses and a missing-context question.",
+        "constraint": "Multiple hypotheses take time; the facilitator must not reward confident mind-reading."
+      },
+      "tradeoff": "A careful discussion may move slower than a rapid explanation, but it can preserve uncertainty and reduce unjustified labels.",
+      "review": "Can a reviewer identify the observable statement without treating any proposed motive as a fact?",
+      "evidence": "Review the wording for clear observed/inferred separation; for a real learning session, gather optional feedback on clarity with appropriate consent.",
+      "facilitation": "“Tell me one action a camera could show, then one thing we cannot know yet.”",
+      "link": "/learn/learn-001/field-lab/",
+      "next": "SC-002"
+    },
+    {
+      "id": "SC-002",
+      "slug": "the-tote-route",
+      "track": 2,
+      "field": "Movement Literacy",
+      "focus": "context",
+      "canonical_course": "A Movement in Context",
+      "title": "A tote, a route, a purpose",
+      "question": "When we move the table, what else changes?",
+      "setting": "In a fictional shop, a tote sits on a counter and must be moved to a table. A chair and another visitor share the route.",
+      "given": [
+        "The intended goal is to clear the counter.",
+        "The tote has two handles in the drawing.",
+        "The path includes a turn around a chair."
+      ],
+      "interpretation": "Moving the table closer will definitely make the task easier for everyone.",
+      "unknown": "Tote weight, individual preferences, passage widths, traffic, reach and whether the table blocks other users.",
+      "designA": {
+        "name": "V1 — Shorten the path",
+        "action": "Move the table next to the counter on the plan.",
+        "constraint": "The shorter route might reduce shared passage space."
+      },
+      "designB": {
+        "name": "V2 — Design for both tasks and circulation",
+        "action": "Try a nearby table position while preserving a usable shared route; ask what real measurements are needed.",
+        "constraint": "A diagram cannot determine actual access or individual task suitability."
+      },
+      "tradeoff": "Distance may improve while crowding or reach gets worse. One variable never explains the whole arrangement.",
+      "review": "What observable information would distinguish a shorter drawn route from a genuinely more usable task?",
+      "evidence": "Document actual dimensions and seek input from people who use the space before claiming improved access or effort.",
+      "facilitation": "“Name the goal first, then the objects, path, time and people. Which condition did we change?”",
+      "link": "/learn/learn-002/field-lab/",
+      "next": "SC-003"
+    },
+    {
+      "id": "SC-003",
+      "slug": "the-library-route",
+      "track": 3,
+      "field": "Place & Environment",
+      "focus": "access",
+      "canonical_course": "Routes, Access & Choice",
+      "title": "Two paths to the reading room",
+      "question": "Why might a longer path offer a better choice?",
+      "setting": "A fictional library plan shows a direct route through a narrow doorway and a longer route through a shared corridor with unclear signage.",
+      "given": [
+        "Route A is shorter in the sketch.",
+        "Route A has a visibly marked narrow doorway.",
+        "Route B takes more turns and passes an unclear sign."
+      ],
+      "interpretation": "The longer route is accessible, because it avoids the narrow door.",
+      "unknown": "Actual clear widths, slopes, door operation, surface, rest opportunities, sign visibility and the visitors' experience.",
+      "designA": {
+        "name": "V1 — Send everyone along Route B",
+        "action": "Place one arrow directing all visitors toward the longer corridor.",
+        "constraint": "The corridor signage and route conditions are not verified."
+      },
+      "designB": {
+        "name": "V2 — Offer informed alternatives",
+        "action": "Clarify both options, remove temporary obstructions where feasible and verify real constraints before directing visitors.",
+        "constraint": "Improving information does not certify physical usability or building-code compliance."
+      },
+      "tradeoff": "A clearer wayfinding system could add clutter; a shorter path could be constrained by its doorway.",
+      "review": "What would we need to measure, observe and ask before promoting either route?",
+      "evidence": "Conduct a genuine site survey and appropriately consented user review; check applicable local standards separately.",
+      "facilitation": "“Our sketch tells us about the drawing. What would we have to inspect in the building?”",
+      "link": "/learn/field-labs/route-choices/",
+      "next": "SC-004"
+    },
+    {
+      "id": "SC-004",
+      "slug": "the-paper-bridge",
+      "track": 4,
+      "field": "Play & Participation",
+      "focus": "participation",
+      "canonical_course": "Rules Create Possibilities",
+      "title": "The rule that silenced a contribution",
+      "question": "Does less talking mean less participation?",
+      "setting": "Four fictional adults build a bridge from paper. A rule allows one builder to touch materials while others can only give spoken instructions.",
+      "given": [
+        "One participant handles the paper.",
+        "Two participants speak during the task.",
+        "One participant draws and speaks very little."
+      ],
+      "interpretation": "The quiet participant has no ideas or is disengaged.",
+      "unknown": "Whether the participant chose a drawing route, found spoken turns useful, or wanted to contribute in another way.",
+      "designA": {
+        "name": "V1 — Keep speaking-only contributions",
+        "action": "Ask everyone except the builder to explain ideas out loud.",
+        "constraint": "The rule narrows valid contribution formats and can generate public pressure."
+      },
+      "designB": {
+        "name": "V2 — Negotiate contribution modes",
+        "action": "Offer voluntary building, sketching, feedback and observation, with clear transitions between roles.",
+        "constraint": "More options can introduce material crowding or unclear group responsibilities."
+      },
+      "tradeoff": "Expanded choice is promising on paper, but does not demonstrate actual belonging or quality of group participation.",
+      "review": "Does the invitation explicitly allow multiple meaningful modes without assigning individuals to them?",
+      "evidence": "Check the written roles, observe real use only with appropriate safeguards, and seek optional, privacy-respecting feedback.",
+      "facilitation": "“You can sketch, build, describe or observe. What does each contribution help the group discover?”",
+      "link": "/learn/field-labs/rules-create-possibilities/",
+      "next": "SC-005"
+    },
+    {
+      "id": "SC-005",
+      "slug": "the-three-courts",
+      "track": 5,
+      "field": "Sport & Movement Culture",
+      "focus": "culture",
+      "canonical_course": "Sport Beyond Competition",
+      "title": "One passing game, three cultures",
+      "question": "Can a scoreboard tell us who belongs?",
+      "setting": "Four fictional adults pass a ball in a park, during sports-club practice and in an adult learning group.",
+      "given": [
+        "The same passing movement occurs in three story settings.",
+        "The club can count completed passes.",
+        "The learning group may change a rule to investigate it."
+      ],
+      "interpretation": "A higher pass count shows better inclusion or more enjoyment.",
+      "unknown": "Who felt invited, what participation formats were usable, and how participants interpreted the experience.",
+      "designA": {
+        "name": "V1 — Score only completed passes",
+        "action": "Use a pass count to describe success across all three settings.",
+        "constraint": "A metric about a defined action is not a metric of belonging or experience."
+      },
+      "designB": {
+        "name": "V2 — Keep the count within its scope",
+        "action": "Describe the pass count, ask about roles and space, and add voluntary reflection without ranking individuals.",
+        "constraint": "More questions require respectful consent and may not produce a single comparable score."
+      },
+      "tradeoff": "A simple number is easy to compare; an honest cultural account is richer but less reducible to a leaderboard.",
+      "review": "Which conclusion is supported by a count, and which requires other evidence?",
+      "evidence": "Define the scoring method and limits, then seek voluntary feedback if conducting a real programme evaluation.",
+      "facilitation": "“What did the score measure? What important question did it leave unanswered?”",
+      "link": "/learn/field-labs/sport-culture/",
+      "next": "SC-006"
+    },
+    {
+      "id": "SC-006",
+      "slug": "the-classroom-minute",
+      "track": 6,
+      "field": "Families & Schools",
+      "focus": "education",
+      "canonical_course": "Five-Minute Classroom Movement",
+      "title": "Five minutes, several invitations",
+      "question": "Does one instruction create the same opportunity for everyone?",
+      "setting": "A fictional educator is designing a five-minute movement-and-observation invitation in a room with close desks and different participation preferences.",
+      "given": [
+        "The proposed window is five minutes.",
+        "Desks restrict shared space in the scenario.",
+        "The educator wants a predictable closing transition."
+      ],
+      "interpretation": "Any child who remains seated is not participating or needs a diagnosis.",
+      "unknown": "Room clearances, student preferences, specific support arrangements, school safeguards and suitability for any real group.",
+      "designA": {
+        "name": "V1 — A single required action",
+        "action": "Tell the group to stand and imitate the same movements.",
+        "constraint": "One required body position excludes alternatives and may draw attention to individuals."
+      },
+      "designB": {
+        "name": "V2 — Voluntary routes toward one purpose",
+        "action": "Offer observation, seated or standing alternatives as appropriate, describe transitions, and close without ranking.",
+        "constraint": "Choice needs understandable directions, supervision and local adaptation; no health or attention benefit is established."
+      },
+      "tradeoff": "A simple instruction takes less explanation; real choice can take more preparation and must remain genuinely optional.",
+      "review": "Can a teacher identify the task purpose, safe spatial limits, available alternatives and stop cue from the plan?",
+      "evidence": "Evaluate the written plan and local school/safeguarding requirements; do not collect child identities or claim cognitive effects.",
+      "facilitation": "“Which options fit the room? You can participate by describing, observing or choosing an appropriate movement.”",
+      "link": "/learn/field-labs/classroom-choice/",
+      "next": "SC-007"
+    },
+    {
+      "id": "SC-007",
+      "slug": "the-workshop-loop",
+      "track": 7,
+      "field": "Facilitation & Community",
+      "focus": "facilitation",
+      "canonical_course": "How a Workshop Works",
+      "title": "A facilitator who listens to the room",
+      "question": "What should change after the first workshop design?",
+      "setting": "Six fictional adults join a 20-minute paper-bridge learning encounter with shared materials, some noise and different preferred ways to contribute.",
+      "given": [
+        "The initial written script allows speaking-only contributions.",
+        "A fictional facilitator has 20 minutes.",
+        "The goal is to examine how rules change group participation options."
+      ],
+      "interpretation": "A confident facilitator's script guarantees a successful or inclusive workshop.",
+      "unknown": "How real participants would experience the session, whether choices were usable, and which outcomes could be supported by evidence.",
+      "designA": {
+        "name": "V1 — Lecture then activity",
+        "action": "Explain rules for most of the encounter and request spoken feedback from everyone.",
+        "constraint": "Long instructions and public speaking requirements can limit voluntary participation."
+      },
+      "designB": {
+        "name": "V2 — Observe, name, design, facilitate, evaluate, improve",
+        "action": "Offer building, sketching or observing, plan transitions, separate evidence from interpretations and document one justified revision.",
+        "constraint": "The revised design remains untested; a neat rubric cannot certify real learning or inclusion."
+      },
+      "tradeoff": "The improved script takes more planning but allows a clearer review of choices, boundaries and unanswered questions.",
+      "review": "Is the stated purpose supported by the invitation, timing, roles, privacy safeguards and a bounded evaluation question?",
+      "evidence": "Check the plan against predeclared criteria; only after appropriate consent and safeguards should real participants' optional feedback inform further change.",
+      "facilitation": "“Which part of the invitation should we improve—and what evidence makes that question worth asking?”",
+      "link": "/learn/field-labs/facilitation-studio/",
+      "next": "SC-001"
+    }
+  ]
+}

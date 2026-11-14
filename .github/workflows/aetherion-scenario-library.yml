@@ -1,0 +1,62 @@
+name: Aetherion Scenario Library L5 QA (review only)
+
+on:
+  pull_request:
+    paths:
+      - 'learn/scenarios/**'
+      - 'learn/field-labs/index.html'
+      - 'learn/field-labs/facilitation-studio/index.html'
+      - 'assets/aeth-scenario-library.css'
+      - 'assets/aeth-scenario-library.js'
+      - 'qa/aetherion-scenario-library.mjs'
+      - 'qa/aetherion-scenario-library-browser.mjs'
+      - '.github/workflows/aetherion-scenario-library.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate canonical case structure and privacy
+        run: node qa/aetherion-scenario-library.mjs
+
+  browser-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install local Chromium test dependencies
+        run: |
+          npm install --no-save --no-package-lock --ignore-scripts playwright@1.56.0 axe-core@4.10.3
+          npx playwright install chromium --with-deps
+      - name: Serve review branch locally
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/scenario-local.log 2>&1 &
+          for i in $(seq 1 15); do
+            curl --fail --silent --output /dev/null http://127.0.0.1:8765/learn/scenarios/ && exit 0
+            sleep 1
+          done
+          cat /tmp/scenario-local.log
+          exit 1
+      - name: Test routes, filters, compare panels, mobile layout and WCAG subset
+        run: node qa/aetherion-scenario-library-browser.mjs
+      - name: Archive screenshots and exact-branch evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: aetherion-scenario-library-visual
+          path: |
+            qa/artifacts-scenarios/
+            /tmp/scenario-local.log
+          retention-days: 14
+          if-no-files-found: warn
