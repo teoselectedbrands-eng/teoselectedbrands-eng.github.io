@@ -116,4 +116,6 @@
   <!-- Review candidate: add only after the owner-approved merge -->
   <url><loc>https://aetherionmovement.com/org/work-with-us/</loc></url>
   <url><loc>https://aetherionmovement.com/journal/the-drawing-table-experiment/</loc></url>
+  <!-- Aetherion integrated pathways — owner review only before release -->
+  <url><loc>https://aetherionmovement.com/start/</loc></url>
 </urlset>
