@@ -8,6 +8,7 @@ on:
       - 'learn/learn-001/field-lab/index.html'
       - 'learn/learn-002/field-lab/index.html'
       - 'assets/aeth-field-labs.css'
+      - 'docs/aetherion-academy-track-learning-register-20261114.md'
       - 'qa/aetherion-guided-labs.mjs'
       - '.github/workflows/aetherion-guided-labs.yml'
   workflow_dispatch:
