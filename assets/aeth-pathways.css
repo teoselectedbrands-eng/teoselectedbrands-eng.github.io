@@ -37,11 +37,12 @@
 .aeth-path.ap-learn .ap-card:nth-child(2){background:#eaf2f9}
 .aeth-path.ap-learn .ap-card:nth-child(3){background:#f7f1e6}
 .aeth-path.ap-classes{--ap-ink:#503e2d;--ap-muted:#665547;--ap-border:#e3d4be;background:linear-gradient(135deg,#fff5e4,#f9f3e6)}
-.aeth-path.ap-classes .ap-index{color:#c5824b}
+.aeth-path.ap-classes .ap-index{color:#795027}
 .aeth-path.ap-classes .ap-card:nth-child(2){background:#fbf1e7}
 .aeth-path.ap-classes .ap-card:nth-child(3){background:#f3e9eb}
 .aeth-path.ap-classes .ap-card:nth-child(4){background:#edf0e6}
 .aeth-path.ap-events{--ap-ink:#234b40;--ap-muted:#4a6759;--ap-border:#b7d9c8;background:linear-gradient(125deg,#e5f5ec,#f4f6e9)}
+.aeth-path.ap-events .ap-index{color:#315e4a}
 .aeth-path.ap-events .ap-steps{position:relative;counter-reset:stages}
 .aeth-path.ap-events .ap-step{border-top:4px solid #79a88e}
 .aeth-path.ap-events .ap-step:nth-child(2){border-top-color:#b4ab72}
