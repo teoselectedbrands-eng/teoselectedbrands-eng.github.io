@@ -102,6 +102,7 @@ for(const url of ['/learn/','/classes/','/events/','/professional-services/']){
     return r.violations.map(v=>({id:v.id,impact:v.impact,description:v.help,affected:v.nodes.length,targets:v.nodes.slice(0,3).map(n=>n.target)}));
   });
   a11y.push({url,violations:result});
+  check('Automated WCAG 2.1 A/AA scan '+url+' reports no findings',result.length===0,result);
   console.log('A11Y',url,JSON.stringify(result));
   await auditPage.close();
 }
