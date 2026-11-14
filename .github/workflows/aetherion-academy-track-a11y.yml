@@ -1,0 +1,23 @@
+name: Aetherion Academy track accessibility (review-only)
+
+on:
+  pull_request:
+    paths:
+      - 'learn/academy/index.html'
+      - 'qa/aetherion-academy-track-a11y.mjs'
+      - '.github/workflows/aetherion-academy-track-a11y.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  academy-a11y:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify distinct course labels and stable track anchors
+        run: node qa/aetherion-academy-track-a11y.mjs
