@@ -49,3 +49,6 @@
 @media(max-width:350px){.scn .scn-legend{grid-template-columns:1fr}}
 @media print{.mast,.footer,.scn .scn-controls,.scn .scn-side{display:none!important}.scn .scn-intro{background:white!important;color:#111;padding:0}.scn .scn-intro h1{color:#111}.scn .scn-card,.scn .scn-rev{break-inside:avoid}}
 @media(prefers-reduced-motion:reduce){.scn *{transition:none!important;scroll-behavior:auto!important}}
+
+.scn .scn-compare-controls{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:650px){.scn .scn-compare-controls{grid-template-columns:1fr}}
