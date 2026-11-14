@@ -2,7 +2,21 @@ name: Aetherion Batch 2 Contact Handoff QA
 on:
   push:
     branches:
+      - main
       - review/aetherion-batch2-contact-handoff-20261114
+    paths: &aetherion_contact_paths
+      - 'help/**'
+      - 'learn/**'
+      - 'classes/**'
+      - 'events/**'
+      - 'professional-services/**'
+      - 'assets/aeth-pathways.css'
+      - 'qa/aetherion-contact-bridge.mjs'
+      - '.github/workflows/aetherion-contact-bridge.yml'
+  pull_request:
+    branches:
+      - main
+    paths: *aetherion_contact_paths
   workflow_dispatch:
 permissions:
   contents: read
