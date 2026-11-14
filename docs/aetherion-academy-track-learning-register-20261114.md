@@ -69,3 +69,22 @@ These are editorial cross-links and future learning paths, not claims about a le
 **Batch L4:** Build the Track 07 facilitator reflection and reuse its review loop to critique the earlier samples.
 
 The system should not restart from scratch. Preserve accepted lessons and register evidence, then add only the next validated layer.
+
+---
+
+## Iteration L2 — two proposed open-field scenarios (review-only)
+
+**Scope:** Additive expansion to the previously drafted two field labs. This changes **learning sample coverage**, not the canonical 21-course curriculum count.
+
+| Track | Standalone scenario route | Distinction to preserve | Status |
+| --- | --- | --- | --- |
+| 03 · Place & Environment | `/learn/field-labs/route-choices/` | Route geometry and signage are not proof of universal accessibility or legal compliance | Draft, not published |
+| 04 · Play & Participation | `/learn/field-labs/rules-create-possibilities/` | A rule can permit different contributions without guaranteeing participation outcomes | Draft, not published |
+
+**Discovery:** `/learn/field-labs/` links all four samples, and `/learn/` gains a carefully labelled link. The first two samples now link into the new route and rule scenarios. Full lesson modules remain in development; no new course enrolment, scoring, certificate, intake, child-data submission or booking is enabled.
+
+**Release dependency:** This is a stacked review branch based on the exact content of the PR #11 guided labs. Merge or deploy only after resolving that prerequisite and obtaining separate owner authorization for each exact candidate head. Do not treat a green source check as a substitute for preview, rendered links, responsive inspection and hosted verification.
+
+**Editorial reasoning loop:** Observe scene → compare physical/social conditions → distinguish assumption and evidence → propose a change → identify trade-offs → define what to check → return to the next learning question.
+
+**Future L3 (not delivered in this iteration):** one scenario each for Track 05 sport culture and Track 06 families/schools. Track 07 facilitator skills should integrate evaluation of all earlier scenarios, not become an isolated series.
