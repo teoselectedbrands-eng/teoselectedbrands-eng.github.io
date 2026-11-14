@@ -23,6 +23,9 @@ for (const item of cases) {
   assert.ok(page.includes('href="/assets/aeth-field-labs.css?v=20261114-01"'), path + ": missing CSS");
   assert.ok(intro.includes('href="/learn/' + item.slug + '/field-lab/"'), path + ": intro not connected");
   assert.ok(page.includes('href="/learn/' + item.next + '/field-lab/"'), path + ": no cross-track continuation");
+  assert.ok(page.includes('<a href="/learn/' + item.slug + '/">View the ' +
+    (item.slug === "learn-001" ? "observation" : "movement") +
+    ' introduction ↗</a>'), path + ": wrong return link in the recommended next steps");
 
   const starts = [...page.matchAll(/<section class="lab-section" id="([^"]+)" aria-labelledby="([^"]+)"/g)];
   assert.deepEqual(starts.map(s => s[1]), ids, path + ": expected four steps in order");
