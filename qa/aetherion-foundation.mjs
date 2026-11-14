@@ -1,6 +1,6 @@
 // Aetherion foundation browser QA. Runs against exact PR source on localhost.
 import { chromium } from 'playwright';
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
 const base='http://127.0.0.1:8765', dest='qa/artifacts';
 mkdirSync(dest,{recursive:true});
 const widths=[320,390,768,1280];
@@ -75,6 +75,37 @@ const bad=await browser.newPage();
 const missing=await bad.goto(base+'/missing-foundation-route-404/',{waitUntil:'domcontentloaded'});
 check('Unknown route returns 404',missing.status()===404,missing.status());
 await bad.close();
+// Verify shared mobile navigation on all four standalone pages.
+for(const url of ['/learn/','/classes/','/events/','/professional-services/']){
+  const navPage=await browser.newPage({viewport:{width:390,height:844}});
+  await navPage.goto(base+url,{waitUntil:'networkidle'});
+  const menu=navPage.locator('.menu-btn');
+  check('Mobile menu present '+url,(await menu.count())===1);
+  if(await menu.count()){
+    await menu.click();
+    check('Mobile menu expands '+url,(await menu.getAttribute('aria-expanded'))==='true'&&await navPage.locator('.nav').evaluate(x=>x.classList.contains('open')));
+    await navPage.keyboard.press('Escape');
+    check('Escape closes menu '+url,(await menu.getAttribute('aria-expanded'))==='false');
+  }
+  await navPage.close();
+}
+
+// WCAG 2.1 A/AA automated audit (informative; not a substitute for VoiceOver).
+const axeSrc=readFileSync('node_modules/axe-core/axe.min.js','utf8');
+const a11y=[];
+for(const url of ['/learn/','/classes/','/events/','/professional-services/']){
+  const auditPage=await browser.newPage({viewport:{width:390,height:844}});
+  await auditPage.goto(base+url,{waitUntil:'networkidle'});
+  await auditPage.addScriptTag({content:axeSrc});
+  const result=await auditPage.evaluate(async()=>{
+    const r=await window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}});
+    return r.violations.map(v=>({id:v.id,impact:v.impact,description:v.help,affected:v.nodes.length,targets:v.nodes.slice(0,3).map(n=>n.target)}));
+  });
+  a11y.push({url,violations:result});
+  console.log('A11Y',url,JSON.stringify(result));
+  await auditPage.close();
+}
+writeFileSync(dest+'/a11y-results.json',JSON.stringify(a11y,null,2));
 await browser.close();
 const report={count:n,passed:passed.length,failed:failed.length,failures:failed,limits:['Native Safari/VoiceOver not checked','General email inbox replies and clinician availability not tested','No external booking or intake activated']};
 writeFileSync(dest+'/qa-results.json',JSON.stringify({report,passed},null,2));
