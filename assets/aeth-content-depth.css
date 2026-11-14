@@ -38,3 +38,8 @@
 .adp-hero-collage a span{position:absolute;inset:auto 0 0;padding:23px 8px 10px;color:white;background:linear-gradient(transparent,#102d24dd);font-size:.82rem;text-align:center;font-weight:800}
 .adp-hero-collage figcaption{grid-column:1/-1;font-size:.75rem;color:#426353;line-height:1.5}
 @media(max-width:580px){.adp-hero-collage a img{height:190px}}
+
+/* The Classes hero uses existing editorial photos, not the previous illustration badge. */
+.ap-hero-media.adp-hero-collage::after,.ap-hero-media.adp-hero-collage::before{content:none!important;display:none!important}
+.ap-hero-media.adp-hero-collage figcaption{position:static!important;display:block!important;background:transparent!important;padding:3px 0 0!important;font-size:.74rem!important;color:#476653!important;line-height:1.45!important}
+.adp-section h2.adp-compact-title{font-size:clamp(1.2rem,2.5vw,1.5rem);line-height:1.24;margin:4px 0 16px}
