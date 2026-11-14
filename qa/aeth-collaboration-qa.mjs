@@ -13,6 +13,7 @@ const routes = [
 ];
 const widths = [320,390,768,1280];
 const report = { passed:[], failed:[], date:new Date().toISOString(), routes:routes.map(x=>x.path) };
+mkdirSync('qa/artifacts',{recursive:true});
 function check(name,ok,details=''){(ok?report.passed:report.failed).push({name,details});}
 const browser=await chromium.launch({headless:true});
 for (const target of routes) {
