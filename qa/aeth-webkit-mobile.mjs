@@ -60,16 +60,22 @@ for(const width of [320,390]){
     await menu.tap();
     check('webkit '+width+' menu opens',await menu.getAttribute('aria-expanded')==='true');
     check('webkit '+width+' navigation displayed',await page.locator('#mainnav').isVisible());
-    await page.locator('#mainnav a[href="/classes/"]').tap();
-    check('webkit '+width+' navigation reaches classes',new URL(page.url()).pathname==='/classes/');
+    await Promise.all([
+      page.waitForURL(url=>url.pathname==='/classes/',{timeout:15000,waitUntil:'load'}),
+      page.locator('#mainnav a[href="/classes/"]').tap()
+    ]);
+    check('webkit '+width+' navigation reaches classes',new URL(page.url()).pathname==='/classes/',page.url());
   }catch(e){check('webkit '+width+' menu interaction',false,String(e));}
   try{
     await page.goto(base+'/workshops/',{waitUntil:'load'});
     await page.locator('#ws11-all').tap();
     check('webkit '+width+' library search opens',await page.locator('#workshop-catalogue').evaluate(e=>e.open===true));
     await page.goto(base+'/workshops/',{waitUntil:'load'});
-    await page.locator('.ws11-audience a[href="/workshops/audiences/schools/"]').tap();
-    check('webkit '+width+' audience navigation',new URL(page.url()).pathname==='/workshops/audiences/schools/');
+    await Promise.all([
+      page.waitForURL(url=>url.pathname==='/workshops/audiences/schools/',{timeout:15000,waitUntil:'load'}),
+      page.locator('.ws11-audience a[href="/workshops/audiences/schools/"]').tap()
+    ]);
+    check('webkit '+width+' audience navigation',new URL(page.url()).pathname==='/workshops/audiences/schools/',page.url());
   }catch(e){check('webkit '+width+' workshop interaction',false,String(e));}
   await context.close();
 }
