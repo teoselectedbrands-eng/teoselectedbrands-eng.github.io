@@ -88,3 +88,38 @@ The system should not restart from scratch. Preserve accepted lessons and regist
 **Editorial reasoning loop:** Observe scene → compare physical/social conditions → distinguish assumption and evidence → propose a change → identify trade-offs → define what to check → return to the next learning question.
 
 **Future L3 (not delivered in this iteration):** one scenario each for Track 05 sport culture and Track 06 families/schools. Track 07 facilitator skills should integrate evaluation of all earlier scenarios, not become an isolated series.
+
+---
+
+## Iteration L3 — Sport & Movement Culture / Families & Schools (review only)
+
+**Branch:** `review/aetherion-tracks05-06-connected-labs-20261114`  
+**Dependency:** PR #12 head `51f44378a9ca2384cba55510af2373e3b583b43a`, which itself depends on PR #11. No merge, public release or operational service activation is authorized by this register.
+
+### Two new standalone guided learning examples
+
+| Canonical track and outline | Proposed self-paced sample route | Question and learning boundary |
+| --- | --- | --- |
+| Track 05, Sport Beyond Competition | `/learn/field-labs/sport-culture/` | Same fictional ball-passing activity in park, sport club and learning group: what changes when rules, institutions, roles and goals change? Counting passes does not measure inclusion, enjoyment, belonging or real-world impact |
+| Track 06, Five-Minute Classroom Movement | `/learn/field-labs/classroom-choice/` | Fictional educator design sample: compare one-size-fits-all and choice-based invitations, build a five-minute paper sequence and reflect on space, timing, privacy, voluntary options and adult supervision, without claims about child development, attention or outcomes |
+
+**Updated hub:** `/learn/field-labs/` holds six linked samples. `/learn/` points to it while explicitly stating that the samples are not complete courses.
+
+**Canonical Academy remains unchanged:** 7 tracks × 3 course concepts = 21. Only two have public introductory pages; 19 remain curriculum outlines, including the Track 03–06 titles referenced by standalone examples. An independent lab is not enrolment, course completion, attendance, graded progress or certification.
+
+### Learning loop joining first six tracks
+
+Observation & Interpretation → Movement Literacy → Place & Environment → Play & Participation → Sport & Movement Culture → Families & Schools → reflective facilitation in future Track 07.
+
+This is a navigational/editorial possibility, not a mandatory linear curriculum or claim that educational transfer has been measured.
+
+### Review / release boundaries
+
+- Archive the exact head and preserve individual PR layers; release only in owner-authorised order.
+- Test all six routes, their canonicals, the Learn hub and back links, semantic headings, optional disclosure examples and privacy boundaries.
+- Inspect real mobile rendered experience before any public release. Native VoiceOver hands-on check is deferred, but accessible HTML and noncollection checks remain in QA.
+- No client, child, medical, attendance or contact information collection; no live RSVP, workshops, scheduling, invoice, payments, platform accounts, certificates or additional professional claims.
+
+### Next development focus (future L4, not completed here)
+
+Track 07 · How a Workshop Works: a **facilitator feedback loop** that deliberately revisits the six samples to make editorial and learning-design decisions. Keep reflective reviews, consent boundaries, accommodations and release decisions separate from enrolment and live delivery.
