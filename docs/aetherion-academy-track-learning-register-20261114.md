@@ -162,3 +162,43 @@ Review-only. Do not merge, deploy, publish, collect data, activate attendance, c
 ### Future L5 direction, not delivered here
 
 Build a **facilitator scenario library and decision architecture**, starting with additional cases from the seven canonical tracks: purpose, available evidence, material/resource constraints, participation modes, safeguards, and revision history. Review each exemplar as a learning design, not an individual assessment. Do not multiply catalogues without improving their actual educational depth.
+
+---
+
+## Iteration L5 — Scenario Library and comparative design decisions (PRIVATE REVIEW)
+
+**Branch:** `review/aetherion-scenario-library-l5-20261115`  
+**Stack dependency:** PR #14 head `31c2791a48702822ec914847b4de7c22586f2642`, built upon #13 → #12 → #11. PR #10 (screen-reader label enhancements) remains independent. New routes have not been published.
+
+**New index:** `/learn/scenarios/`: seven fictional cases with standalone index pages at `/learn/scenarios/cases/<slug>/`; a track filter, focus filter, and side-by-side comparison with no user data collection or saved state.
+
+**Canonical structured source:** `/learn/scenarios/scenario-register.json` is a source-controlled JSON register. It contains seven unique case IDs (SC-001 to SC-007), each mapped to one Academy track and a previously drafted linked field lab. This JSON is an editorial reference, not a registry of real patients, students, sessions, measurements, validated results or confirmed providers.
+
+| ID | Domain | Fictional design decision |
+| --- | --- | --- |
+| SC-001 | Observation | Describe a doorway scene without assuming a hidden motive |
+| SC-002 | Movement | Compare tote-route changes without claiming universal ease |
+| SC-003 | Place | Distinguish sketched route access from measured usability |
+| SC-004 | Play | Offer genuine contribution roles without reading silence as absence |
+| SC-005 | Sport culture | Keep pass counts separate from inclusion or belonging |
+| SC-006 | Families/schools | Analyse a voluntary five-minute classroom invitation; no children assessed |
+| SC-007 | Facilitation | Design a 20-minute group question, examine choices, revise evidence claims |
+
+### Standard field model
+- **Given in fiction:** statements that the invented story provides; not observations of actual people
+- **Interpretation:** a possible explanation that the case does not establish
+- **Unknown:** information not present in the story
+- **V1 design proposal:** an initial arrangement and constraint
+- **V2 revision proposal:** an alternative design and a potential trade-off; not implemented or empirically better
+- **Review criterion and evidence gate:** the question and kinds of real checks that would be needed before an actual effectiveness/access claim
+- **Facilitator invitation:** a respectful example script and a link to the related previous lab and the next case
+
+### Navigation and user privacy
+The seven-case index supports filtering and two-case comparison through local JavaScript DOM updates. All seven cards remain in HTML if script execution is unavailable. `select` choices stay in current page state only; no accounts, event telemetry, analytics, storage, network submission, form controls, certificates or score. Include a back route to the source field lab and the seven-course concept Academy.
+
+### Release/readiness gate
+This is a source-draft extension, not an approval to publish. Check exact-head test scripts and browser runs, mobile layouts at 320/390/768/1280, focus/control labels, filter-count feedback, comparison consistency, working links and canonical URLs, no unintended client-side data calls, default no-JS readability, and honest non-course lab status. Native iPhone VoiceOver remains a separate deferred check, not a passed gate.
+
+The Academy still has seven tracks, 21 course concepts, two public introductory course pages and 19 outline-only concepts. The **seven field labs and seven scenario cases** represent two different forms of draft educational content, *not* fourteen complete courses.
+
+**Future L6 proposal, not delivered here:** facilitate private expert commentary on the case schema and add strictly documented observations only if explicit consent, evidence standards and owner approval exist; no automatic publication or personal-data collection.
