@@ -1,0 +1,49 @@
+name: Aetherion Batch 3 — Field + Coordination Foundation QA
+on:
+  push:
+    branches:
+      - review/aetherion-batch3-field-coordination-20261114
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: aetherion-batch3-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    name: Whole-site index audit and actual Chromium interactions — no deploy
+    steps:
+      - name: Checkout exact branch SHA
+        uses: actions/checkout@v4
+      - name: Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser and accessibility testing
+        run: |
+          npm install --no-save --no-package-lock --ignore-scripts playwright@1.56.0 axe-core@4.10.3
+          npx playwright install chromium --with-deps
+      - name: Serve exact files locally
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/aetherion-batch3-http.log 2>&1 &
+          for try in $(seq 1 20); do
+            curl --silent --fail --output /dev/null http://127.0.0.1:8765/coordination/ && exit 0
+            sleep 1
+          done
+          cat /tmp/aetherion-batch3-http.log
+          exit 1
+      - name: Run index, links, UI and accessibility tests
+        run: node qa/aeth-batch3.mjs
+      - name: Store screenshots, inventory and QA results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: aetherion-batch3-${{ github.sha }}
+          path: qa/artifacts-batch3/
+          if-no-files-found: warn
+          retention-days: 14

@@ -113,4 +113,8 @@
   <url><loc>https://aetherionmovement.com/journal/a-place-that-invites-movement/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://aetherionmovement.com/news/editions/02/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://aetherionmovement.com/org/</loc><lastmod>2026-11-14</lastmod></url>
+
+  <!-- Aetherion Batch 3: separate original pages; activate only after owner release approval -->
+  <url><loc>https://aetherionmovement.com/coordination/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://aetherionmovement.com/movement/lab/</loc><lastmod>2026-11-14</lastmod></url>
 </urlset>
