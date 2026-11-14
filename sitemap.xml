@@ -113,4 +113,9 @@
   <url><loc>https://aetherionmovement.com/journal/a-place-that-invites-movement/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://aetherionmovement.com/news/editions/02/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://aetherionmovement.com/org/</loc><lastmod>2026-11-14</lastmod></url>
+  <!-- Review candidate: add only after the owner-approved merge -->
+  <url><loc>https://aetherionmovement.com/org/work-with-us/</loc></url>
+  <url><loc>https://aetherionmovement.com/journal/the-drawing-table-experiment/</loc></url>
+  <!-- Aetherion integrated pathways — owner review only before release -->
+  <url><loc>https://aetherionmovement.com/start/</loc></url>
 </urlset>
