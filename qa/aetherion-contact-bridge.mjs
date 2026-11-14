@@ -1,6 +1,6 @@
 // Batch 2: Central Help handoff — real Chromium QA against source branch, no network submissions.
 import {chromium} from 'playwright';
-import {mkdirSync,writeFileSync} from 'node:fs';
+import {mkdirSync,writeFileSync,readFileSync} from 'node:fs';
 mkdirSync('qa/artifacts-contact',{recursive:true});
 const root='http://127.0.0.1:8765',browser=await chromium.launch({headless:true});
 const failures=[],results=[];let checked=0;
@@ -58,8 +58,38 @@ for(const p of pages){
     await page.close();
   }
 }
+
+// Recursive pre-release self-audit: no-JavaScript fallback, hostile query input, privacy and WCAG.
+const withoutJs=await browser.newContext({javaScriptEnabled:false});
+const noJsPage=await withoutJs.newPage();
+await noJsPage.goto(root+'/help/?topic=professional#contact',{waitUntil:'domcontentloaded'});
+test('No JS: generic mailto remains available', (await noJsPage.locator('#contact .cta').getAttribute('href'))==='mailto:hello@aetherionmovement.com');
+test('No JS: topic mailto fallbacks remain available',(await noJsPage.locator('#contact details a[href^="mailto:"]').count())>=9);
+test('No JS: privacy guidance stays visible',(await noJsPage.locator('#contact .route-truth').textContent()).includes('not an appointment'));
+await withoutJs.close();
+const malicious=await browser.newPage();
+await malicious.goto(root+'/help/?topic=%3Cscript%3Ealert%281%29%3C%2Fscript%3E#contact',{waitUntil:'networkidle'});
+test('Unknown injected topic ignored',await malicious.locator('#enquiry-route').isHidden());
+test('Unknown injected topic cannot enter mailto',(await malicious.locator('#contact .cta').getAttribute('href'))==='mailto:hello@aetherionmovement.com');
+await malicious.close();
+const axeScript=readFileSync('node_modules/axe-core/axe.min.js','utf8');
+const a11yResults=[];
+for(const [route,width] of [['/help/',390],['/help/?topic=professional#contact',390],['/help/?topic=event#contact',1280]]){
+  const audit=await browser.newPage({viewport:{width,height:width===390?844:900},reducedMotion:'reduce'});
+  await audit.goto(root+route,{waitUntil:'networkidle'});
+  await audit.addScriptTag({content:axeScript});
+  const violations=await audit.evaluate(async()=>{
+    const r=await window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}});
+    return r.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.slice(0,5).map(n=>n.target),help:v.help}));
+  });
+  a11yResults.push({route,width,violations});
+  test('Automated WCAG 2.1 A/AA '+route+' at '+width,violations.length===0,violations);
+  await audit.close();
+}
+writeFileSync('qa/artifacts-contact/a11y-results.json',JSON.stringify(a11yResults,null,2));
+
 await browser.close();
-const report={checked,passed:checked-failures.length,failed:failures.length,failures,limitations:['Tests use Chromium; not native iOS Safari/VoiceOver','No test email sent; mailbox delivery, staffing and response SLAs unverified','No public event invitations or booking slots activated']};
+const report={checked,passed:checked-failures.length,failed:failures.length,failures,limitations:['Tests use Chromium; not native iOS Safari/VoiceOver','Owner reports previous successful general mailbox test; automation does not send email or verify assigned staff','No public event invitations or booking slots activated']};
 writeFileSync('qa/artifacts-contact/result.json',JSON.stringify({report,results},null,2));
 console.log(JSON.stringify(report,null,2));
 if(failures.length)process.exitCode=1;
