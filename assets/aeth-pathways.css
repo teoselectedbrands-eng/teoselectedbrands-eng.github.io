@@ -51,3 +51,34 @@
 .aeth-path.ap-professional .ap-index{color:#738d91}
 .aeth-path.ap-professional .ap-note{background:#f9fbfa}
 .aeth-path.ap-professional .ap-card a{color:#275d67}
+
+
+/* Visual introduction: uses original concept art, not clinic photography */
+.intro.ap-enhanced-intro{max-width:1380px;display:grid;grid-template-columns:minmax(0,1.13fr) minmax(0,.87fr);gap:clamp(20px,3vw,44px);align-items:center;padding-top:46px;padding-bottom:22px}
+.ap-hero-copy{min-width:0}.intro.ap-enhanced-intro .page-title{font-size:clamp(40px,5.8vw,86px);margin:13px 0 19px}
+.intro.ap-enhanced-intro p{max-width:660px}
+.ap-hero-media{margin:0;min-width:0;border:1px solid #c9dace;border-radius:24px;overflow:hidden;background:#e0e9df;box-shadow:0 23px 65px #304e4224;position:relative;aspect-ratio:1.48}
+.ap-hero-media img{display:block;width:100%;height:100%;object-fit:cover}
+.ap-hero-media:after{content:"ORIGINAL EDITORIAL ILLUSTRATION";position:absolute;inset:auto 12px 12px auto;font-size:9px;font-weight:800;letter-spacing:.13em;background:#fcfff4e8;color:#2d4d45;padding:7px 9px;border-radius:5px}
+.ap-image-note{font-size:.78rem;line-height:1.4;color:#526b61}
+.ap-jump{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin:9px 0 14px}
+.ap-jump a{font-size:.83rem;padding:7px 12px;background:#ffffffcf;border:1px solid #c1d8c9;border-radius:999px;color:#275a4c;text-decoration:none;font-weight:700}
+.ap-jump a:focus-visible{outline:3px solid #ad791d;outline-offset:3px}
+.ap-lab{margin:28px 0;padding:clamp(18px,2.4vw,27px);background:#fff;border:1px solid #bdd3c9;border-radius:16px}
+.ap-lab h3{font:700 1.5rem/1.2 Georgia,serif;margin:0 0 8px}
+.ap-lab p{margin:8px 0 14px}
+.ap-lab [role="status"]{border-left:4px solid #4e8975;background:#eef7f0;padding:11px 15px;min-height:40px;max-width:75ch}
+.ap-lab .ap-answers{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
+.ap-lab button,.ap-lab select{font:inherit;border-radius:12px;border:1px solid #9ebeb1;padding:11px 15px;max-width:100%;background:#f4f8f2;color:#1b4c42}
+.ap-lab button{cursor:pointer;font-weight:750}
+.ap-lab button[aria-pressed=true]{background:#205d50;color:#fff}
+.ap-lab label{display:block;margin:10px 0 4px;font-size:.9rem;font-weight:700}
+.ap-lab .ap-demo{border:1px dashed #a8c5b6;border-radius:12px;padding:18px;background:#fbfaf2;line-height:1.65;min-height:60px}
+.ap-micro-index{counter-reset:item;display:flex;flex-wrap:wrap;gap:12px;margin:21px 0}
+.ap-micro-index a{display:inline-flex;align-items:center;gap:7px;font-size:.86rem;text-decoration:underline;text-underline-offset:3px;font-weight:700}
+.ap-detail-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}
+.ap-detail-links a{border:1px solid #c7dacd;border-radius:12px;padding:15px;background:#fff;text-decoration:none;font-weight:700}
+.ap-detail-links small{display:block;font-weight:400;color:#547067;margin-top:3px}
+.ap-attribution{font-size:.8rem;color:#4d665c;max-width:74ch}
+@media(max-width:800px){.intro.ap-enhanced-intro{grid-template-columns:1fr;gap:19px;padding-top:32px}.intro.ap-enhanced-intro .page-title{font-size:clamp(40px,11vw,76px)}.ap-hero-media{max-height:390px}.ap-detail-links{grid-template-columns:1fr}}
+@media(max-width:440px){.intro.ap-enhanced-intro{padding-top:24px}.ap-hero-media{border-radius:15px}.ap-lab .ap-answers{flex-direction:column;align-items:stretch}.ap-lab .ap-answers button{width:100%}}
