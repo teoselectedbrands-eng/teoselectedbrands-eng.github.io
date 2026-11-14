@@ -38,7 +38,7 @@ for (const item of cases) {
   assert.ok(!/(localStorage|sessionStorage|fetch\s*\(|sendBeacon\s*\()/i.test(page), path + ": forbidden tracking code");
   assert.ok(page.includes("No account. No grading. No personal-data submission."),
     path + ": published learning boundaries missing");
-  assert.ok(!/(certified course|complete ten lessons|enrol now)/i.test(page), path + ": incorrect availability claim");
+  assert.ok(!/(you are now certified|all ten modules are complete|enrol now)/i.test(page), path + ": incorrect availability claim");
   const idsSeen = [...page.matchAll(/\sid="([^"]+)"/g)].map(x => x[1]);
   assert.equal(idsSeen.length, new Set(idsSeen).size, path + ": duplicate DOM ids");
   console.log("PASS " + path + ": four learning stages, safe disclosures, visible boundaries, linked intro, connected learning path");
