@@ -1,0 +1,39 @@
+/* Scoped guided field labs — readable without JavaScript. */
+.aeth-lab{--lab-ink:#172820;--lab-border:#ccd9ce;--lab-soft:#eff5ed;--lab-green:#276747;--lab-accent:#d2f65d;color:var(--lab-ink)}
+.aeth-lab .lab-hero{background:linear-gradient(125deg,#19372b,#235f43);color:#fff;border-radius:24px;padding:clamp(22px,5vw,46px);margin:20px 0 28px}
+.aeth-lab .lab-hero h1{font-size:clamp(2.1rem,5.5vw,4.4rem);line-height:1.07;letter-spacing:-.045em;max-width:750px;margin:.4em 0}
+.aeth-lab .lab-hero p{max-width:70ch}
+.aeth-lab .lab-hero a{color:#d2f65d}
+.aeth-lab .lab-eyebrow{letter-spacing:.09em;text-transform:uppercase;font-weight:850;font-size:.8rem}
+.aeth-lab .lab-steps{display:flex;flex-wrap:wrap;gap:9px;list-style:none;margin:0 0 30px;padding:0}
+.aeth-lab .lab-steps li{background:var(--lab-soft);color:#204734;padding:9px 15px;border-radius:999px;font-size:.88rem;font-weight:750}
+.aeth-lab .lab-section{margin:36px 0;scroll-margin-top:90px}
+.aeth-lab .lab-section h2{font-size:clamp(1.6rem,4.2vw,2.6rem);letter-spacing:-.025em;line-height:1.2}
+.aeth-lab .lab-section p{max-width:73ch}
+.aeth-lab .lab-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.aeth-lab .lab-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.aeth-lab .lab-panel{background:#fff;border:1px solid var(--lab-border);border-radius:18px;padding:22px;min-width:0}
+.aeth-lab .lab-panel h3{font-size:1.14rem;line-height:1.3;margin:0 0 10px}
+.aeth-lab .lab-panel p:last-child{margin-bottom:0}
+.aeth-lab .lab-tag{display:inline-block;font-size:.77rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;border-radius:7px;background:#e1efdf;padding:4px 8px;color:#25523b;margin:0 0 13px}
+.aeth-lab .lab-prompt{background:#f2f6ef;border-left:5px solid var(--lab-green);padding:20px 22px;border-radius:12px;margin:20px 0}
+.aeth-lab .lab-prompt strong{display:block;margin-bottom:7px}
+.aeth-lab .lab-answer{margin:12px 0;background:white;border:1px solid var(--lab-border);border-radius:12px;overflow:hidden}
+.aeth-lab .lab-answer summary{cursor:pointer;display:list-item;font-weight:750;padding:14px 16px}
+.aeth-lab .lab-answer summary:focus-visible{outline:3px solid #285f43;outline-offset:-3px}
+.aeth-lab .lab-answer>div{padding:0 16px 16px}
+.aeth-lab .lab-answer p:last-child{margin-bottom:0}
+.aeth-lab .lab-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.aeth-lab .lab-flow>div{background:var(--lab-soft);border-radius:13px;padding:18px}
+.aeth-lab .lab-flow strong{display:block;font-size:1.05rem;margin-bottom:8px}
+.aeth-lab .lab-matrix{width:100%;border-collapse:collapse;background:#fff}
+.aeth-lab .lab-matrix th,.aeth-lab .lab-matrix td{text-align:left;vertical-align:top;border:1px solid var(--lab-border);padding:12px}
+.aeth-lab .lab-matrix th{background:#eaf2e9}
+.aeth-lab .lab-matrix caption{text-align:left;font-weight:750;margin-bottom:10px}
+.aeth-lab .lab-links{background:#173b2d;color:white;border-radius:20px;padding:24px;margin:32px 0}
+.aeth-lab .lab-links a{color:#dcff97}
+.aeth-lab .lab-links ul{display:flex;flex-wrap:wrap;gap:15px 30px;margin:15px 0 0;padding-left:21px}
+.aeth-lab .lab-small{color:#506459;font-size:.9rem}
+.aeth-lab .lab-links .lab-small{color:#e0eadf}
+@media(max-width:720px){.aeth-lab .lab-grid,.aeth-lab .lab-grid.three,.aeth-lab .lab-flow{grid-template-columns:1fr}.aeth-lab .lab-panel{padding:17px}.aeth-lab .lab-hero{border-radius:15px}.aeth-lab .lab-matrix th,.aeth-lab .lab-matrix td{padding:8px;font-size:.92rem}}
+@media(prefers-reduced-motion:reduce){.aeth-lab *{scroll-behavior:auto!important;transition:none!important}}
