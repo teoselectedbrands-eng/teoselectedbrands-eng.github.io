@@ -49,7 +49,7 @@ assert.equal((page.match(/<\/details>/g)||[]).length, 5, "Unclosed disclosure");
 assert.equal((page.match(/class="fac-timeline"/g)||[]).length, 5, "20-minute schedule must have five stages");
 assert.ok(page.includes("00–03 min") && page.includes("17–20 min"), "Workshop time endpoints missing");
 assert.equal((page.match(/class="fac-gate"/g)||[]).length, 3, "Three design gates required");
-assert.ok(page.includes("print-friendly facilitator reflection template"), "Private worksheet label missing");
+assert.ok(page.includes("Print-friendly facilitator reflection template"), "Private worksheet label missing");
 assert.ok(page.includes('href="/assets/aeth-facilitator-studio.css?v=20261114-01"'), "Scoped facilitator CSS missing");
 assert.ok(css.includes("@media(max-width:560px)") && css.includes("@media print"), "Mobile/print styles missing");
 assert.ok(!/<(?:form|input|textarea)\b/i.test(page), "Do not solicit or store learner answers");
@@ -68,5 +68,5 @@ for (const src of linkedSources) {
   assert.ok(earlier.includes('href="' + newURL + '"'), src + " lacks a facilitator return path");
 }
 assert.ok(register.includes("Iteration L4"), "L4 phase register missing");
-assert.ok(register.includes("future L5"), "Do not claim the future scenario library is done");
+assert.ok(register.includes("Future L5"), "Do not claim the future scenario library is done");
 console.log("PASS Track 07: 10 observation lenses, 12 precise terms, 6 steps, 5 examples, 3 gates, 7 connected labs, privacy, truthful curriculum status.");
