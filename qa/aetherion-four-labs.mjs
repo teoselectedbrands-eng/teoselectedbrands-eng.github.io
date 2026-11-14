@@ -42,14 +42,17 @@ for (const target of [
   "/learn/learn-001/field-lab/",
   "/learn/learn-002/field-lab/",
   "/learn/field-labs/route-choices/",
-  "/learn/field-labs/rules-create-possibilities/"
+  "/learn/field-labs/rules-create-possibilities/",
+  "/learn/field-labs/sport-culture/",
+  "/learn/field-labs/classroom-choice/"
 ]) assert.ok(index.includes('href="' + target + '"'), "index missing " + target);
-assert.equal((index.match(/class="lab-no"/g) || []).length, 4, "four and only four learning samples");
+assert.equal((index.match(/class="lab-no"/g) || []).length, 6, "six distinct learning samples must appear");
 assert.ok(first.includes('href="/learn/field-labs/rules-create-possibilities/"'), "Track 01 → Track 04 not wired");
 assert.ok(second.includes('href="/learn/field-labs/route-choices/"'), "Track 02 → Track 03 not wired");
 assert.ok(first.includes('href="/learn/field-labs/"') && second.includes('href="/learn/field-labs/"'), "older labs must reach the index");
 assert.ok(index.includes("Nineteen remain curriculum outlines"), "index must not claim 21 available courses");
 assert.ok(styles.includes("@media(max-width:660px)"), "mobile layout adjustments missing");
 assert.ok(learnLanding.includes('href="/learn/field-labs/"'), "Learn landing must offer one clear path to all labs");
+assert.ok(learnLanding.includes("Explore six guided learning samples"), "Learn landing must not advertise a stale count");
 assert.ok(register.includes("Iteration L2") && register.includes("Future L3"), "release stages must remain recorded");
-console.log("PASS: two four-stage scenario labs, four-card index, reciprocal connections, honest availability, no data collection, responsive styles");
+console.log("PASS: Track 03/04 scenarios, six-card index, reciprocal connections, honest availability, no data collection, responsive styles");

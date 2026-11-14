@@ -1,0 +1,22 @@
+/* Scoped only to Academy learning samples, not clinical programmes. */
+.aeth-lab .culture-settings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:22px 0}
+.aeth-lab .culture-card{background:#fff;border:1px solid #d0ddcf;border-radius:18px;padding:19px;min-width:0}
+.aeth-lab .culture-card h3{font-size:1.2rem;margin:.4em 0}
+.aeth-lab .culture-card p{margin:.5em 0}
+.aeth-lab .culture-card .culture-caption{font-size:.85rem;color:#4d6756}
+.aeth-lab .culture-card .culture-top{display:flex;align-items:center;gap:10px;font-weight:800;color:#205137}
+.aeth-lab .culture-card .culture-symbol{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:#e5efdf;font-size:1.15rem}
+.aeth-lab .culture-stage{display:grid;grid-template-columns:75px minmax(0,1fr);gap:16px;align-items:start;padding:18px 0;border-bottom:1px solid #c9d9cc}
+.aeth-lab .culture-stage>strong{display:block;color:#236344;background:#e3f0df;border-radius:10px;padding:7px 9px;text-align:center}
+.aeth-lab .culture-stage h3{margin:0 0 6px;font-size:1.08rem}
+.aeth-lab .culture-stage p{margin:0}
+.aeth-lab .culture-compare{border-left:5px solid #8ebf76;background:#f4f8f1;border-radius:12px;padding:17px 20px;margin:16px 0}
+.aeth-lab .culture-scope{display:flex;flex-wrap:wrap;gap:9px;margin:12px 0}
+.aeth-lab .culture-scope span{background:#e3f0dc;color:#20503a;border-radius:100px;font-weight:750;padding:7px 12px;font-size:.87rem}
+.aeth-lab .culture-role{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.aeth-lab .culture-role>article{border:1px solid #c9d9cd;border-radius:15px;padding:17px;background:white}
+.aeth-lab .culture-role h3{font-size:1.1rem;margin:0 0 8px}
+.aeth-lab .culture-role p{margin:0}
+.aeth-lab .culture-fact{border:1px solid #bccfbf;border-radius:14px;background:#f6faf3;padding:17px}
+@media(max-width:760px){.aeth-lab .culture-settings,.aeth-lab .culture-role{grid-template-columns:1fr}.aeth-lab .culture-stage{grid-template-columns:1fr;gap:9px}.aeth-lab .culture-stage>strong{width:max-content}.aeth-lab .culture-card{padding:16px}}
+@media(prefers-reduced-motion:reduce){.aeth-lab .culture-card{transition:none}}
