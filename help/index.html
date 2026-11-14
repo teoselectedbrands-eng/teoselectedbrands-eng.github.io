@@ -20,7 +20,7 @@ body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;backgrou
     .formcard li { margin-block: 6px; }
     .formcard a { overflow-wrap: anywhere; }
     .formcard .cta { color: white; }
-  </style>
+  .route-notice{padding:14px 17px;background:#e6f0e8;border-inline-start:4px solid #477c60;border-radius:10px;color:#173f2e}.route-notice strong{display:block;margin-bottom:3px}.route-truth{font-size:.9rem;color:#395e4c;margin:12px 0 14px}</style>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -43,6 +43,8 @@ body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;backgrou
       <h2 id="contact-heading">Contact Aetherion</h2>
       <p><a class="cta" href="mailto:hello@aetherionmovement.com" aria-describedby="email-help">Email Aetherion</a></p>
       <p class="hint" id="email-help">Opens a draft to hello@aetherionmovement.com in your email app. Write and send it when you are ready.</p>
+      <p id="enquiry-route" class="route-notice" data-enquiry-route hidden><strong id="enquiry-route-label"></strong> <span id="enquiry-route-detail"></span></p>
+      <p class="route-truth">General enquiries only. An email draft is not an appointment, registration or confidential clinical intake. Please do not include medical documents or identifying information about children.</p>
       <details>
         <summary>Choose a topic (optional)</summary>
         <ul>
@@ -229,6 +231,31 @@ body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;backgrou
   </main>
   <footer>© Aetherion · <a href="/#/privacy/">Privacy</a> · <a href="/#/accessibility/">Accessibility</a></footer>
   <script>
+
+    // Single central Help route: topic only. No name, health information or answers in URLs.
+    // This enhancement changes only a mailto draft and explanatory text; it never submits data.
+    const enquiryRoutes = Object.freeze({
+      learning: {label:'Learning & resources',detail:'For questions about lessons, worksheets or accessibility of an open resource.',subject:'Aetherion enquiry | Learning & Resources',message:'Hello Aetherion,\nI have a general question about a learning resource. Please advise the appropriate contact.\nThank you.'},
+      movement: {label:'Movement learning',detail:'For comparing formats or asking how to find a suitable nonclinical programme when availability is confirmed.',subject:'Aetherion enquiry | Movement & Activity',message:'Hello Aetherion,\nI would like to ask a general question about nonclinical movement learning. Please advise the appropriate contact.\nThank you.'},
+      workshop: {label:'Workshops & group learning',detail:'For school or community programme ideas. Dates and registration are not confirmed through this page.',subject:'Aetherion enquiry | Workshop for a Group',message:'Hello Aetherion,\nI would like information about a possible learning workshop for a group. Please advise the appropriate coordination route.\nThank you.'},
+      event: {label:'Events & invitations',detail:'For general event questions. A calendar entry or email does not mean a public place has been reserved.',subject:'Aetherion enquiry | Community Event',message:'Hello Aetherion,\nPlease advise how invitations or attendance are handled for a confirmed Aetherion learning event.\nI am not including a private meeting link or personal information.\nThank you.'},
+      professional: {label:'Professional contact route',detail:'Ask for an authorised private contact route; do not include diagnoses, medical records or a child’s identifying details.',subject:'Aetherion enquiry | Professional Contact Route',message:'Hello Aetherion,\nPlease advise how to reach the appropriate professional coordination contact through a private authorised channel. I am not including medical information.\nThank you.'},
+      partnership: {label:'Community partnerships',detail:'For host organisations exploring a programme scope, facilitation, access and readiness.',subject:'Aetherion enquiry | Partnership & Collaboration',message:'Hello Aetherion,\nI would like to discuss a possible educational or community partnership. Please advise the appropriate next step.\nThank you.'}
+    });
+    const selectedRoute = new URLSearchParams(location.search).get('topic');
+    const selectedConfig = Object.hasOwn(enquiryRoutes, selectedRoute) ? enquiryRoutes[selectedRoute] : null;
+    if (selectedConfig) {
+      const notice = document.querySelector('[data-enquiry-route]');
+      const compose = document.querySelector('#contact .cta[href^="mailto:"]');
+      if (notice && compose) {
+        notice.hidden = false;
+        document.getElementById('enquiry-route-label').textContent = selectedConfig.label;
+        document.getElementById('enquiry-route-detail').textContent = selectedConfig.detail;
+        compose.textContent = 'Compose ' + selectedConfig.label.toLowerCase() + ' enquiry';
+        compose.href = 'mailto:hello@aetherionmovement.com?subject=' + encodeURIComponent(selectedConfig.subject) + '&body=' + encodeURIComponent(selectedConfig.message);
+      }
+    }
+
     const search = document.getElementById('faq-search');
     const category = document.getElementById('faq-category');
     const count = document.getElementById('faq-count');
