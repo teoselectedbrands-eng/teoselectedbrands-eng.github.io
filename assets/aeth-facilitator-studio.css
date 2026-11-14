@@ -1,0 +1,40 @@
+/* Track 07: observation-first facilitation studio; scoped to lab page only. */
+.aeth-lab .fac-lenses{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:18px 0 24px}
+.aeth-lab .fac-lens{background:#fff;border:1px solid #c8d8c9;border-radius:16px;padding:15px;min-width:0}
+.aeth-lab .fac-lens b{display:block;font-size:.77rem;letter-spacing:.08em;color:#2b6a49}
+.aeth-lab .fac-lens strong{display:block;font-size:1.01rem;margin:6px 0}
+.aeth-lab .fac-lens p{font-size:.88rem;line-height:1.5;margin:0}
+.aeth-lab .fac-role{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:16px 0}
+.aeth-lab .fac-role article{background:#fff;border:1px solid #cad8cb;border-radius:17px;padding:19px}
+.aeth-lab .fac-role h3{font-size:1.11rem;margin:.2em 0 .6em}
+.aeth-lab .fac-role p{margin:0}
+.aeth-lab .fac-steps{counter-reset:fac;list-style:none;margin:16px 0;padding:0}
+.aeth-lab .fac-steps li{counter-increment:fac;display:grid;grid-template-columns:88px 1fr;gap:14px;padding:15px 0;border-bottom:1px solid #d1dfd2}
+.aeth-lab .fac-steps li:before{content:counter(fac,decimal-leading-zero);font-size:1.25rem;font-weight:800;color:#295e43}
+.aeth-lab .fac-steps strong{display:block}
+.aeth-lab .fac-steps p{margin:3px 0 0}
+.aeth-lab .fac-glossary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.aeth-lab .fac-term{background:#fff;border:1px solid #c6d8c7;border-radius:15px;padding:16px;min-width:0}
+.aeth-lab .fac-term dt{font-weight:850;font-size:1rem;color:#214e38}
+.aeth-lab .fac-term dd{margin:7px 0 0;line-height:1.55}
+.aeth-lab .fac-legend{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:16px 0}
+.aeth-lab .fac-legend>div{padding:13px;border:1px solid #c7d8c9;background:#edf5eb;border-radius:13px}
+.aeth-lab .fac-legend strong{display:block;margin-bottom:5px}
+.aeth-lab .fac-legend p{font-size:.87rem;margin:0}
+.aeth-lab .fac-gate{border:1px solid #c7d8ca;border-left:5px solid #527e60;border-radius:12px;background:#fff;padding:16px;margin:12px 0}
+.aeth-lab .fac-gate strong{display:block}
+.aeth-lab .fac-gate p{margin:6px 0 0}
+.aeth-lab .fac-timeline{display:grid;grid-template-columns:96px minmax(0,1fr);gap:12px;align-items:start;margin:10px 0;border-bottom:1px solid #cbdaca;padding:12px 0}
+.aeth-lab .fac-timeline b{font-variant-numeric:tabular-nums;color:#285c42}
+.aeth-lab .fac-timeline p{margin:0}
+.aeth-lab .fac-sheet{background:#fff;border:1px dashed #8eab94;border-radius:15px;padding:17px;margin:16px 0}
+.aeth-lab .fac-sheet ol{margin-bottom:0;padding-left:23px}
+.aeth-lab .fac-sheet li{margin:9px 0}
+.aeth-lab .fac-terms-note{font-size:.9rem;color:#48614f}
+.aeth-lab .fac-loop{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:18px 0}
+.aeth-lab .fac-loop span{display:inline-flex;align-items:center;justify-content:center;padding:10px 12px;border-radius:9px;background:#e5f1e3;font-weight:850}
+.aeth-lab .fac-loop em{font-style:normal;color:#376247}
+@media(max-width:830px){.aeth-lab .fac-lenses{grid-template-columns:repeat(2,minmax(0,1fr))}.aeth-lab .fac-role{grid-template-columns:1fr}.aeth-lab .fac-legend{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.aeth-lab .fac-glossary,.aeth-lab .fac-legend{grid-template-columns:1fr}.aeth-lab .fac-steps li{grid-template-columns:44px 1fr}.aeth-lab .fac-lens{padding:12px}.aeth-lab .fac-timeline{grid-template-columns:1fr;gap:4px}}
+@media print{.aeth-lab .fac-sheet{break-inside:avoid}.aeth-lab .fac-steps li{break-inside:avoid}.aeth-lab .fac-lenses{grid-template-columns:repeat(5,1fr)}.mast,.footer{display:none!important}}
+@media(prefers-reduced-motion:reduce){.aeth-lab *{scroll-behavior:auto!important;transition:none!important}}
