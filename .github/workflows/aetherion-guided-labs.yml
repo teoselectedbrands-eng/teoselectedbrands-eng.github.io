@@ -1,6 +1,18 @@
 name: Aetherion Academy Guided Lab QA (review only)
 
 on:
+  push:
+    branches:
+      - 'review/aetherion-two-guided-field-labs-*'
+    paths:
+      - 'learn/learn-001/index.html'
+      - 'learn/learn-002/index.html'
+      - 'learn/learn-001/field-lab/index.html'
+      - 'learn/learn-002/field-lab/index.html'
+      - 'assets/aeth-field-labs.css'
+      - 'docs/aetherion-academy-track-learning-register-20261114.md'
+      - 'qa/aetherion-guided-labs.mjs'
+      - '.github/workflows/aetherion-guided-labs.yml'
   pull_request:
     paths:
       - 'learn/learn-001/index.html'
