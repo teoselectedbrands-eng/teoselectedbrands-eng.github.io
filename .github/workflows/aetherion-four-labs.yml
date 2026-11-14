@@ -1,8 +1,9 @@
-name: Aetherion Four Guided Labs QA (review only)
+name: Aetherion Core Scenarios & Hub QA (review only)
 on:
   push:
     branches:
       - 'review/aetherion-tracks03-04-bridged-labs-*'
+      - 'review/aetherion-tracks05-06-connected-labs-*'
     paths:
       - 'learn/field-labs/**'
       - 'learn/learn-001/field-lab/**'
@@ -22,12 +23,12 @@ on:
 permissions:
   contents: read
 jobs:
-  four-lab-links:
+  scenario-links:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Verify four-stage content and links
+      - name: Verify four-stage scenario content and six-lab navigation
         run: node qa/aetherion-four-labs.mjs
