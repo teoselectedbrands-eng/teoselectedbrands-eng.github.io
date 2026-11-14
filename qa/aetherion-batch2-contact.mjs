@@ -46,16 +46,17 @@ const pageNo=await nojs.newPage();await pageNo.goto(ROOT+'/help/',{waitUntil:'do
 verify('no-JS general fallback mailto',await pageNo.locator('a#enquiry-compose[href="mailto:hello@aetherionmovement.com"]').count()===1);
 verify('no-JS topic fallback links',await pageNo.locator('.formcard details a[href^="mailto:"]').count()>=8);
 await nojs.close();
-const sourceRoutes=[['learn','/learn/','/help/?topic=learning#contact'],['classes','/classes/','/help/?topic=movement#contact'],['events','/events/','/help/?topic=workshop#contact'],['professional','/professional-services/','/help/?topic=professional#contact']];
+const sourceRoutes=[['learn','/learn/','learning'],['classes','/classes/','movement'],['events','/events/','workshop'],['professional','/professional-services/','professional']];
 const routed=await browser.newPage({viewport:{width:390,height:844}});
-for(const [name,route,link] of sourceRoutes){
+for(const [name,route,topic] of sourceRoutes){
+  const link='/help/?topic='+topic+'#contact';
   const result=await routed.goto(ROOT+route,{waitUntil:'networkidle'});
   verify(name+' route 200',result.status()===200);
   verify(name+' contextual Help link',await routed.locator('a[href="'+link+'"]').count()>0);
   const a=routed.locator('a[href="'+link+'"]').first();
   await a.click();
-  await routed.waitForURL(url=>url.pathname==='/help/' && url.searchParams.get('topic')===name,{timeout:7000});
-  verify(name+' click transitions to preselected Help', (await routed.locator('#enquiry-topic').inputValue())===name);
+  await routed.waitForURL(url=>url.pathname==='/help/' && url.searchParams.get('topic')===topic,{timeout:7000});
+  verify(name+' click transitions to preselected Help', (await routed.locator('#enquiry-topic').inputValue())===topic);
 }
 await routed.goto(ROOT+'/professional-services/',{waitUntil:'networkidle'});
 verify('clinical page remains noindex',(await routed.locator('meta[name=robots]').getAttribute('content')).includes('noindex'));
