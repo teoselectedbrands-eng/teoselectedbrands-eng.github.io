@@ -1,0 +1,28 @@
+name: Aetherion Academy L3 — six connected learning samples (review only)
+
+on:
+  pull_request:
+    paths:
+      - 'learn/field-labs/**'
+      - 'learn/learn-001/field-lab/**'
+      - 'learn/learn-002/field-lab/**'
+      - 'learn/index.html'
+      - 'assets/aeth-community-labs.css'
+      - 'docs/aetherion-academy-track-learning-register-20261114.md'
+      - 'qa/aetherion-six-learning-labs.mjs'
+      - '.github/workflows/aetherion-six-learning-labs.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  connected-labs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify six connected learning examples and status boundaries
+        run: node qa/aetherion-six-learning-labs.mjs
