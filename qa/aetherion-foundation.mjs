@@ -22,7 +22,7 @@ for(const [name,path] of paths){
     const info=await page.evaluate(()=>{
       const vis=x=>x&&x.getClientRects().length>0&&getComputedStyle(x).visibility!=='hidden'&&getComputedStyle(x).display!=='none';
       const main=document.querySelector('main')||document.body;
-      const imgs=[...main.querySelectorAll('img[src*="/assets/pathways/"]')].filter(vis);
+      const imgs=[...main.querySelectorAll('img[src*="/assets/pathways/"], .adp-hero-collage img[src*="/assets/images/"]')].filter(vis);
       return {h1:[...main.querySelectorAll('h1')].filter(vis).length,overflow:Math.max(0,document.documentElement.scrollWidth-innerWidth),
       nav:[...main.querySelectorAll('.ap-jump a')].filter(vis).length,
       imgs:imgs.map(x=>({src:x.getAttribute('src'),ok:x.complete&&x.naturalWidth>0})),
