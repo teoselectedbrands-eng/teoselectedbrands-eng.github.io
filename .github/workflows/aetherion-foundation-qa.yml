@@ -2,7 +2,25 @@ name: Aetherion Foundation QA (review branch)
 on:
   push:
     branches:
+      - main
       - review/aetherion-learn-practice-events-pro-scope-20261114
+    paths: &aetherion_paths
+      - 'learn/**'
+      - 'classes/**'
+      - 'events/**'
+      - 'professional-services/**'
+      - 'index.html'
+      - 'assets/app.js'
+      - 'assets/site.css'
+      - 'assets/foundation.css'
+      - 'assets/aeth-pathways.*'
+      - 'assets/pathways/**'
+      - 'qa/aetherion-foundation.mjs'
+      - '.github/workflows/aetherion-foundation-qa.yml'
+  pull_request:
+    branches:
+      - main
+    paths: *aetherion_paths
   workflow_dispatch:
 permissions:
   contents: read
