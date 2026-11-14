@@ -31,6 +31,13 @@ for(const path of ['coordination/index.html','movement/lab/index.html']){
 const map=readFileSync('sitemap.xml','utf8');
 const loc=[...map.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>m[1]);
 test('Original sitemap extended to 113 unique URLs',loc.length===113&&new Set(loc).size===113,loc.length);
+
+const indexedCanonicals=pages.filter(p=>p.robots?.startsWith('index,')).map(p=>p.canonical).filter(Boolean);
+const indexedMissingFromSitemap=indexedCanonicals.filter(u=>!loc.includes(u));
+const sitemapNotIndexable=loc.filter(u=>!indexedCanonicals.includes(u));
+test('Every declared indexable page has its own sitemap entry',indexedMissingFromSitemap.length===0,indexedMissingFromSitemap);
+test('Sitemap does not include noindex or stale routes',sitemapNotIndexable.length===0,sitemapNotIndexable);
+
 for(const route of ['/coordination/','/movement/lab/'])test('Sitemap contains '+route,loc.includes('https://aetherionmovement.com'+route));
 const discovery=readFileSync('discover/index.html','utf8');
 test('Discover indexes both new routes',['/coordination/','/movement/lab/'].every(x=>discovery.includes('href="'+x+'"')));
