@@ -32,7 +32,7 @@
       if (!card.hidden) count++;
     });
     const status = document.getElementById('movement-count');
-    if (status) status.textContent = count + ' movement studies shown';
+    if (status) status.textContent = count ? 'Movement studies available for this filter' : 'No movement studies match. Try another filter.';
   }
   movementButtons.forEach(b => b.addEventListener('click', () => filterMovements(b.dataset.filter)));
 
@@ -49,7 +49,7 @@
       if (!card.hidden) count++;
     });
     const status = document.getElementById('class-count');
-    if (status) status.textContent = count ? count + ' example format' + (count === 1 ? '' : 's') + ' shown' : 'No example formats match. Try another filter or reset.';
+    if (status) status.textContent = count ? 'Showing matching class formats' : 'No example formats match. Try another filter or reset.';
   }
   classButtons.forEach(b => b.addEventListener('click', () => { classStyle = b.dataset.classFilter; filterClasses(); }));
   level?.addEventListener('change', filterClasses);
