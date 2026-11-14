@@ -91,6 +91,15 @@ for(const width of [390,1280]){
 }
 const page=await browser.newPage({viewport:{width:390,height:844},reducedMotion:'reduce'});
 await page.goto(HOST+'/coordination/',{waitUntil:'networkidle'});
+
+const typography=await page.evaluate(()=>{
+  const css=el=>parseFloat(getComputedStyle(el).fontSize);
+  return {sectionText:css(document.querySelector('#choose > p')),cardLink:css(document.querySelector('#choose .tile a')),
+    sectionTitle:css(document.querySelector('#choose h2'))};
+});
+test('Coordination body font stays readable, not heading-sized',typography.sectionText>=14&&typography.sectionText<=20,typography);
+test('Coordination card links do not inherit huge heading size',typography.cardLink>=14&&typography.cardLink<=20,typography);
+
 await page.locator('#aeth3-topic').selectOption('professional');
 await page.locator('#aeth3-mode').selectOption('online');
 await page.locator('#aeth3-day').fill('2026-12-01');
@@ -103,6 +112,14 @@ test('Coordination: no form or automated submission',await page.locator('form').
 const professional=(await page.locator('meta[name=robots]').getAttribute('content'));
 test('Coordination informational indexability',professional.startsWith('index,'));
 await page.goto(HOST+'/movement/lab/',{waitUntil:'networkidle'});
+
+const labTypography=await page.evaluate(()=>{
+  const css=el=>parseFloat(getComputedStyle(el).fontSize);
+  return {paragraph:css(document.querySelector('#experiment > p')),cardLink:css(document.querySelector('#experiment .tile a'))};
+});
+test('Field Lab body font stays readable, not heading-sized',labTypography.paragraph>=14&&labTypography.paragraph<=20,labTypography);
+test('Field Lab links use body-scale font',labTypography.cardLink>=14&&labTypography.cardLink<=20,labTypography);
+
 const initial=await page.locator('#aeth3-observation').innerText();
 await page.locator('#aeth3-scene').selectOption('route');
 await page.locator('#aeth3-condition').selectOption('noise');
