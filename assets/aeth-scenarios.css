@@ -1,0 +1,26 @@
+/* Additive presentation for illustrated decision labs and the learning index. */
+.aeth-lab .scenario-intro{max-width:74ch}
+.aeth-lab .lab-track-label{display:inline-flex;align-items:center;gap:8px;background:#d9edcf;color:#204731;border-radius:999px;padding:7px 12px;font-size:.8rem;font-weight:850}
+.aeth-lab .lab-map{background:#f3f6ee;border:1px solid #c6d5c8;padding:18px;border-radius:20px;overflow-x:auto;margin:16px 0}
+.aeth-lab .lab-map svg{display:block;width:100%;max-width:760px;margin:auto;height:auto}
+.aeth-lab .lab-map figcaption{margin:14px auto 0;max-width:70ch;font-size:.9rem;color:#415348}
+.aeth-lab .lab-contrast{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.aeth-lab .lab-rule{background:#fff;border:1px solid #c9d7c8;border-top:6px solid #78a98d;border-radius:16px;padding:18px}
+.aeth-lab .lab-rule:nth-child(2){border-top-color:#bad95d}
+.aeth-lab .lab-rule h3{font-size:1.2rem}
+.aeth-lab .lab-rule ul,.aeth-lab .lab-panel ul{padding-left:20px}
+.aeth-lab .lab-rule li,.aeth-lab .lab-panel li{margin-bottom:6px}
+.aeth-lab .lab-chips{display:flex;flex-wrap:wrap;gap:10px}
+.aeth-lab .lab-chips span{display:inline-block;background:#e4f0de;border-radius:11px;padding:8px 13px;font-weight:740;font-size:.93rem}
+.aeth-lab .lab-check{background:#fff;border:1px solid #cad6c9;border-radius:15px;padding:18px}
+.aeth-lab .lab-check strong{display:block}
+.aeth-lab .lab-note{border:1px dashed #7da486;border-radius:15px;padding:18px;background:#f8fcf7}
+.aeth-lab .lab-shelf{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.aeth-lab .lab-shelf a{text-decoration:none;background:white;border:1px solid #ccd9ce;border-radius:16px;padding:19px;display:block;color:#203d2c}
+.aeth-lab .lab-shelf a:hover{border-color:#2c6b4d;background:#f5faf2}
+.aeth-lab .lab-shelf a:focus-visible{outline:3px solid #225b40;outline-offset:4px}
+.aeth-lab .lab-shelf strong{display:block;font-size:1.14rem;margin-bottom:7px}
+.aeth-lab .lab-shelf small{display:block;color:#496754;font-size:.91rem;line-height:1.55}
+.aeth-lab .lab-shelf .lab-no{display:inline-block;border-radius:7px;background:#e3efde;padding:3px 7px;font-weight:850;margin-bottom:12px}
+@media(max-width:660px){.aeth-lab .lab-contrast,.aeth-lab .lab-shelf{grid-template-columns:1fr}.aeth-lab .lab-map{padding:9px}.aeth-lab .lab-map figcaption{padding:0 5px}}
+@media(prefers-reduced-motion:reduce){.aeth-lab .lab-shelf a{transition:none}}
