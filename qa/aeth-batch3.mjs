@@ -94,7 +94,7 @@ await page.goto(HOST+'/coordination/',{waitUntil:'networkidle'});
 
 const typography=await page.evaluate(()=>{
   const css=el=>parseFloat(getComputedStyle(el).fontSize);
-  return {sectionText:css(document.querySelector('#choose > p')),cardLink:css(document.querySelector('#choose .tile a')),
+  return {sectionText:css(document.querySelector('#choose > p:not(.kicker):not(.note):not(.quiet)')),cardLink:css(document.querySelector('#choose .tile a')),
     sectionTitle:css(document.querySelector('#choose h2'))};
 });
 test('Coordination body font stays readable, not heading-sized',typography.sectionText>=14&&typography.sectionText<=20,typography);
@@ -115,7 +115,7 @@ await page.goto(HOST+'/movement/lab/',{waitUntil:'networkidle'});
 
 const labTypography=await page.evaluate(()=>{
   const css=el=>parseFloat(getComputedStyle(el).fontSize);
-  return {paragraph:css(document.querySelector('#experiment > p')),cardLink:css(document.querySelector('#experiment .tile a'))};
+  return {paragraph:css(document.querySelector('#experiment > p:not(.kicker):not(.note):not(.quiet)')),cardLink:css(document.querySelector('#experiment .tile a'))};
 });
 test('Field Lab body font stays readable, not heading-sized',labTypography.paragraph>=14&&labTypography.paragraph<=20,labTypography);
 test('Field Lab links use body-scale font',labTypography.cardLink>=14&&labTypography.cardLink<=20,labTypography);
