@@ -1,5 +1,7 @@
 name: Aetherion Navigation + Content Index QA (review only)
 on:
+  push:
+    branches: [review/aetherion-home-catalogues-ux-20261115]
   pull_request:
     branches: [main]
     paths:
