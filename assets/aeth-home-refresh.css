@@ -1,0 +1,36 @@
+/* Aetherion homepage refresh: emphasis on movement, functioning and learning.
+   Reuses existing reviewed site media only. No logo or public release. */
+.h16-hero{color:#183e31;overflow:hidden;background:radial-gradient(circle at 80% 8%,#d8e9cc 0,transparent 36%),linear-gradient(132deg,#edf4e6 0,#faf6e9 58%,#e3f1e6 100%);padding:clamp(38px,6vw,82px) 0 clamp(42px,6vw,80px)}
+.h16-inner{width:min(1230px,calc(100% - 36px));margin:auto;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:clamp(24px,5vw,62px);align-items:center}
+.h16-eyebrow{text-transform:uppercase;font-size:.77rem;font-weight:850;letter-spacing:.14em;color:#46725e}
+.h16-hero h1{font-size:clamp(3rem,5.8vw,6.1rem);letter-spacing:-.055em;line-height:1.02;margin:14px 0 22px;max-width:800px;color:#183e31}
+.h16-hero h1 em{font-style:normal;color:#b96048}
+.h16-lead{font-size:clamp(1.07rem,1.8vw,1.33rem);line-height:1.55;max-width:690px;color:#31564a}
+.h16-actions{display:flex;flex-wrap:wrap;gap:12px;margin:25px 0 14px}
+.h16-actions a{display:inline-flex;align-items:center;min-height:46px;padding:11px 18px;background:#275d4c;color:#fff!important;border-radius:999px;text-decoration:none;font-weight:750}
+.h16-actions a.secondary{border:1px solid #7c9d87;color:#245646!important;background:#fff8}
+.h16-note{font-size:.83rem;line-height:1.5;color:#4d685b;max-width:630px}
+.h16-visual{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.h16-shot{position:relative;min-height:220px;overflow:hidden;background:#dce6d7;border-radius:21px;box-shadow:0 15px 35px #254b3520}
+.h16-shot:first-child{grid-row:span 2;min-height:450px}
+.h16-shot img{position:absolute;inset:0;object-fit:cover;width:100%;height:100%}
+.h16-shot:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#172d23ad)}
+.h16-shot span{position:absolute;z-index:1;left:17px;bottom:17px;color:white;font-weight:850;font-size:1.12rem;text-shadow:0 2px 8px #0005}
+.h16-paths{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}
+.h16-paths a{border:1px solid #b5cbbb;border-radius:100px;min-height:44px;display:inline-flex;align-items:center;padding:9px 14px;text-decoration:none;font-weight:750;color:#255643}
+.h16-paths a:hover{background:#edf3e9}
+.h16-purpose{width:min(1210px,calc(100% - 36px));margin:35px auto;padding:32px;border:1px solid #cfddcd;border-radius:22px;background:#f4f6ef}
+.h16-purpose h2{font-size:clamp(1.6rem,3vw,2.7rem);letter-spacing:-.03em;margin:5px 0 14px}
+.h16-purpose-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.h16-purpose-grid a{display:flex;flex-direction:column;gap:8px;min-width:0;min-height:172px;padding:20px;border-radius:15px;border:1px solid #c8d8cc;background:#fff;text-decoration:none;color:#21513e}
+.h16-purpose-grid a:nth-child(3n+2){background:#e9f2e5}.h16-purpose-grid strong{font-size:1.25rem;line-height:1.2}.h16-purpose-grid span{font-size:.9rem;line-height:1.5;color:#486758}
+.h16-highlight-wrap{width:min(1180px,calc(100% - 36px));margin:auto;padding:35px 0 65px}
+.h16-feature-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.h16-feature-grid a{display:flex;flex-direction:column;gap:12px;min-height:175px;background:#f0f5ea;border:1px solid #d0dbcb;padding:22px;border-radius:14px;text-decoration:none;color:#194c3a}
+.h16-feature-grid strong{font-size:1.14rem;line-height:1.28}
+.h16-feature-grid small{font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#5a7363}
+.h16-feature-grid span{font-size:.88rem;line-height:1.45;color:#546b5c;margin-top:auto}
+.h16-hero a:focus-visible,.h16-purpose a:focus-visible,.h16-highlight-wrap a:focus-visible{outline:3px solid #b56b2d;outline-offset:4px}
+@media(max-width:930px){.h16-inner{grid-template-columns:1fr}.h16-visual{max-width:710px}.h16-purpose-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.h16-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:570px){.h16-hero h1{font-size:clamp(2.7rem,11vw,4.1rem)}.h16-shot{min-height:140px}.h16-shot:first-child{min-height:295px}.h16-visual{gap:8px}.h16-shot{border-radius:14px}.h16-shot span{font-size:.85rem;left:11px;bottom:12px}.h16-purpose{padding:19px}.h16-purpose-grid,.h16-feature-grid{grid-template-columns:1fr}.h16-purpose-grid a,.h16-feature-grid a{min-height:112px}}
+@media(prefers-reduced-motion:reduce){.h16-hero *{animation:none!important;transition:none!important}}
