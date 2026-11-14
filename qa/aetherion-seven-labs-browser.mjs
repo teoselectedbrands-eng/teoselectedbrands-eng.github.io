@@ -69,7 +69,7 @@ for(const [,path] of pages){
   const response=await request.request.get(base+path,{timeout:10000});
   check("local linked route "+path,response.status()===200,response.status());
 }
-await request.dispose();
+await request.close();
 const axeSource=readFileSync("node_modules/axe-core/axe.min.js","utf8");
 for(const [name,path] of [["hub","/learn/field-labs/"],["studio","/learn/field-labs/facilitation-studio/"]]){
   const page=await browser.newPage({viewport:{width:390,height:844}});
