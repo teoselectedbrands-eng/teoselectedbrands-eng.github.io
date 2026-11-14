@@ -29,3 +29,25 @@
 @media(max-width:850px){.aeth-path .ap-grid.ap-grid-four{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.aeth-path{padding:20px;margin:20px 0 32px}.aeth-path .ap-grid,.aeth-path .ap-grid.ap-grid-four,.aeth-path .ap-steps{grid-template-columns:1fr}.aeth-path .ap-links{flex-direction:column;align-items:stretch}.aeth-path .ap-button{text-align:center}}
 @media(prefers-reduced-motion:reduce){.aeth-path *{scroll-behavior:auto}}
+
+
+/* Distinct experience identities. Consistent structure, differentiated purpose. */
+.aeth-path.ap-learn{--ap-ink:#223b55;--ap-muted:#4f6177;--ap-border:#c5d9e6;background:radial-gradient(circle at 100% 0%,#dbeaf6 0,#eff5f5 35%,#f7f8f1 95%)}
+.aeth-path.ap-learn .ap-index{color:#547b99}
+.aeth-path.ap-learn .ap-card:nth-child(2){background:#eaf2f9}
+.aeth-path.ap-learn .ap-card:nth-child(3){background:#f7f1e6}
+.aeth-path.ap-classes{--ap-ink:#503e2d;--ap-muted:#665547;--ap-border:#e3d4be;background:linear-gradient(135deg,#fff5e4,#f9f3e6)}
+.aeth-path.ap-classes .ap-index{color:#c5824b}
+.aeth-path.ap-classes .ap-card:nth-child(2){background:#fbf1e7}
+.aeth-path.ap-classes .ap-card:nth-child(3){background:#f3e9eb}
+.aeth-path.ap-classes .ap-card:nth-child(4){background:#edf0e6}
+.aeth-path.ap-events{--ap-ink:#234b40;--ap-muted:#4a6759;--ap-border:#b7d9c8;background:linear-gradient(125deg,#e5f5ec,#f4f6e9)}
+.aeth-path.ap-events .ap-steps{position:relative;counter-reset:stages}
+.aeth-path.ap-events .ap-step{border-top:4px solid #79a88e}
+.aeth-path.ap-events .ap-step:nth-child(2){border-top-color:#b4ab72}
+.aeth-path.ap-events .ap-step:nth-child(3){border-top-color:#578c83}
+.aeth-path.ap-professional{--ap-ink:#253d46;--ap-muted:#50666a;--ap-border:#b7cbd0;background:linear-gradient(140deg,#eff3f3,#f8f6ed)}
+.aeth-path.ap-professional .ap-card{border-left:3px solid #91a7ac}
+.aeth-path.ap-professional .ap-index{color:#738d91}
+.aeth-path.ap-professional .ap-note{background:#f9fbfa}
+.aeth-path.ap-professional .ap-card a{color:#275d67}
