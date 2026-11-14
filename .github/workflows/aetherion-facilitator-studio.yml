@@ -1,0 +1,28 @@
+name: Aetherion Track 07 — observation and facilitation (review only)
+
+on:
+  pull_request:
+    paths:
+      - 'learn/field-labs/**'
+      - 'learn/learn-001/field-lab/**'
+      - 'learn/learn-002/field-lab/**'
+      - 'learn/index.html'
+      - 'assets/aeth-facilitator-studio.css'
+      - 'docs/aetherion-academy-track-learning-register-20261114.md'
+      - 'qa/aetherion-facilitator-studio.mjs'
+      - '.github/workflows/aetherion-facilitator-studio.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  facilitation-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify observation, terminology and seven-track links
+        run: node qa/aetherion-facilitator-studio.mjs

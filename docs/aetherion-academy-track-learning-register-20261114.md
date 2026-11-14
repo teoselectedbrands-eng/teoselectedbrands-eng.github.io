@@ -123,3 +123,42 @@ This is a navigational/editorial possibility, not a mandatory linear curriculum 
 ### Next development focus (future L4, not completed here)
 
 Track 07 · How a Workshop Works: a **facilitator feedback loop** that deliberately revisits the six samples to make editorial and learning-design decisions. Keep reflective reviews, consent boundaries, accommodations and release decisions separate from enrolment and live delivery.
+
+---
+
+## Iteration L4 — Observation-first facilitation studio (private review)
+
+**Authoring direction:** The facilitator is not a nonstop lecturer or a secret evaluator of people. This role combines grounded observation, terminology discipline, scenario design, group-process support, evaluation of the *design*, and revision. A creative, 10/10 observation metaphor expresses attention to more dimensions; it must not imply omniscience or a real person/automated service.
+
+**New standalone sample:** `/learn/field-labs/facilitation-studio/` — related to canonical Track 07 `How a Workshop Works` (outline, not a complete course). New sample adds:
+- **Ten observation lenses:** purpose, action, space, objects, time, sensory context, people/roles, choice, evidence, uncertainty.
+- **Six steps:** observe → name → design → facilitate → evaluate → improve.
+- **Twelve glossary terms:** observation, inference, hypothesis, context, affordance, facilitation, participation, accommodation, criterion, evidence, feedback loop, trade-off.
+- A fictional 20-minute six-adult encounter with a paper bridge, three optional facilitation roles, clear invitation language and reflective closure.
+- A print-friendly, noncollecting seven-question design review worksheet, optional revealable worked examples and links back to previous six samples.
+
+**Updated discovery:** `/learn/field-labs/` shows seven sample routes. `/learn/` describes seven *samples*, not seven full courses. The 7 canonical tracks × 3 concepts = **21 course concepts** stays unchanged: **two public introductory pages + 19 other curriculum outlines**. All new labs are draft pages on stacked review branches until separately authorized, integrated and verified in production.
+
+### Facilitation responsibility and evidence gates
+
+**Observer:** Name visible action and conditions. Avoid assigning diagnoses, motives or private preferences from surface behaviour.
+
+**Terminologist:** Keep observed / inferred / proposed / verified distinct. Terms label the *epistemic status* of a claim, not the identity of the individual.
+
+**Scenario designer:** Specify goal, people, objects, environment, roles, optional participation routes, transitions, constraints and trade-offs; distinguish fictional activity plans from real pilots.
+
+**Facilitator:** Make choice and understanding possible; manage timing and privacy boundaries without coercing speech or participation.
+
+**Evaluator:** Test a bounded design question with relevant evidence, not an unannounced grade of participants.
+
+**Improvement engineer:** Log exactly what changed in the next draft, why it changed, the new uncertainty and the next review checkpoint.
+
+### Status and dependency
+
+This L4 review branch is **stacked on PR #13** (Track 05/06), which depends on PR #12 then PR #11. PR #10's separate Academy screen-reader label fix remains independent and must be considered during release integration.
+
+Review-only. Do not merge, deploy, publish, collect data, activate attendance, create paid courses, enable sign-in or issue certificates. Keep baseline semantic accessibility and privacy checks; hands-on native iPhone VoiceOver testing has been deferred by the owner for now, not passed.
+
+### Future L5 direction, not delivered here
+
+Build a **facilitator scenario library and decision architecture**, starting with additional cases from the seven canonical tracks: purpose, available evidence, material/resource constraints, participation modes, safeguards, and revision history. Review each exemplar as a learning design, not an individual assessment. Do not multiply catalogues without improving their actual educational depth.

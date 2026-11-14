@@ -17,16 +17,17 @@ const labs = [
   {name: "Routes", path: "/learn/field-labs/route-choices/", file: "learn/field-labs/route-choices/index.html"},
   {name: "Rules", path: "/learn/field-labs/rules-create-possibilities/", file: "learn/field-labs/rules-create-possibilities/index.html"},
   {name: "Sport", path: "/learn/field-labs/sport-culture/", file: "learn/field-labs/sport-culture/index.html"},
-  {name: "Classroom", path: "/learn/field-labs/classroom-choice/", file: "learn/field-labs/classroom-choice/index.html"}
+  {name: "Classroom", path: "/learn/field-labs/classroom-choice/", file: "learn/field-labs/classroom-choice/index.html"},
+  {name: "Facilitation", path: "/learn/field-labs/facilitation-studio/", file: "learn/field-labs/facilitation-studio/index.html"}
 ];
 
-assert.equal((hub.match(/class="lab-no"/g) || []).length, 6, "Hub must contain exactly six independently described samples");
+assert.equal((hub.match(/class="lab-no"/g) || []).length, 7, "Hub must contain seven independently described samples");
 assert.match(hub, /Nineteen remain curriculum outlines/, "Do not misrepresent the 19 incomplete courses");
-assert.match(hub, /not six completed courses/, "Six samples are not complete courses");
-assert.match(learn, /Explore six guided learning samples/, "The Learn page must use the current count");
+assert.match(hub, /not seven completed courses/, "Seven samples are not complete courses");
+assert.match(learn, /Explore seven guided learning samples/, "The Learn page must use the current count");
 assert.ok(learn.includes('href="/learn/field-labs/"'), "Learn landing must link to the hub");
 assert.match(register, /Iteration L3/, "Document this learning iteration");
-assert.match(register, /future L4/i, "Keep Track 07 planning distinct");
+assert.match(register, /Iteration L4/, "Track 07 review must be recorded");
 assert.match(stylesheet, /@media\(max-width:760px\)/, "Small-screen layout adjustment missing");
 
 for (const lab of labs) {
