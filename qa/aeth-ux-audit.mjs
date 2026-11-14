@@ -66,7 +66,7 @@ try{
  await page.goto(root+'/workshops/',{waitUntil:'networkidle'});
  const details=page.locator('#workshop-catalogue');
  ck('Archive collapsed on entry',!(await details.getAttribute('open')));
- await details.locator('summary').click();
+ await details.locator(':scope > summary').click();
  ck('Archive opens',await details.evaluate(el=>el.open));
  ck('Search filter accessible',await page.locator('#ws10-search').isVisible());
 }catch(e){ck('Workshop visitor path',false,String(e));}
