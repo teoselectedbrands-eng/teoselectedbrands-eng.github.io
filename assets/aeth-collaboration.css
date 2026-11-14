@@ -1,0 +1,45 @@
+/* Aetherion participation and editorial review candidate — scoped, additive. */
+.aetc-page{--aetc-ink:#18362f;--aetc-leaf:#2d6854;--aetc-border:#cbdbcf;--aetc-bg:#f5f7f0;color:var(--aetc-ink)}
+.aetc-page *{box-sizing:border-box}
+.aetc-shell{width:min(1140px,calc(100% - 38px));margin-inline:auto}
+.aetc-hero{padding:clamp(46px,8vw,100px) 0 65px;background:radial-gradient(circle at 82% 18%,#d3ebbf 0,#d3ebbf00 34%),linear-gradient(125deg,#e3efe5,#fff8ed)}
+.aetc-kicker{font-size:.78rem!important;font-weight:850;letter-spacing:.14em;text-transform:uppercase;color:#3c7660}
+.aetc-page h1{font-size:clamp(2.65rem,7vw,5.8rem);letter-spacing:-.055em;line-height:1.03;max-width:850px;margin:14px 0 24px}
+.aetc-page h2{font-size:clamp(1.75rem,3vw,2.75rem);line-height:1.15;letter-spacing:-.035em;margin:0 0 16px}
+.aetc-page h3{font-size:1.3rem;line-height:1.25;margin:8px 0 12px}
+.aetc-page p,.aetc-page li{line-height:1.68}
+.aetc-lead{font-size:clamp(1.05rem,1.9vw,1.32rem);max-width:690px}
+.aetc-section{padding:clamp(35px,6vw,75px) 0;border-bottom:1px solid var(--aetc-border)}
+.aetc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:24px}
+.aetc-grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.aetc-card{min-width:0;padding:24px;border:1px solid var(--aetc-border);border-radius:18px;background:#fff;box-shadow:0 8px 28px #182e2110}
+.aetc-card:nth-child(3n+2){background:#edf4e9}
+.aetc-card .aetc-number{font:700 2.6rem/1 Georgia,serif;color:#719b80}
+.aetc-chip{display:inline-block;font-size:.76rem;letter-spacing:.04em;font-weight:760;border:1px solid #9cbaa4;border-radius:100px;padding:4px 10px;color:#2e6450}
+.aetc-steps{counter-reset:ae;list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.aetc-steps>li{counter-increment:ae;padding:18px;border-top:3px solid #75a189;background:#f2f6ed;border-radius:8px}
+.aetc-steps>li:before{content:"0" counter(ae);display:block;font:700 1.5rem Georgia,serif;color:#49765f;margin-bottom:12px}
+.aetc-cta{display:inline-block;margin:10px 10px 10px 0;padding:12px 19px;border-radius:99px;background:#215846;color:#fff!important;text-decoration:none;font-weight:800}
+.aetc-cta.alt{color:#215846!important;background:transparent;border:1px solid #779f86}
+.aetc-page a:focus-visible{outline:3px solid #bf7430;outline-offset:4px}
+.aetc-quote{padding:24px;border-left:4px solid #4d8d66;background:#eaf3e5;border-radius:0 12px 12px 0;margin:24px 0}
+.aetc-detail{margin-block:12px;padding:17px;background:white;border:1px solid var(--aetc-border);border-radius:12px}
+.aetc-detail summary{font-weight:800;cursor:pointer}
+.aetc-note{font-size:.87rem;color:#496358;max-width:780px}
+.aetc-illustration{margin:22px 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.aetc-scene{min-height:215px;position:relative;overflow:hidden;padding:16px;border:1px solid #c7d9c9;border-radius:14px;background:#f2ead7;display:flex;flex-direction:column;justify-content:space-between}
+.aetc-scene:after{content:"";position:absolute;inset:auto 16% 58px;height:5px;background:#b77e54;border-radius:8px}
+.aetc-paper{width:110px;height:76px;background:white;border:1px solid #e4e1dd;transform:rotate(-7deg);margin:20px auto 0;display:grid;place-items:center;box-shadow:0 4px 10px #0001;color:#447e5d;font-size:1.5rem}
+.aetc-scene.dim{background:#b2b7b8;color:#172b2c}
+.aetc-scene.dim .aetc-paper{filter:brightness(.74)}
+.aetc-scene.mixed{background:repeating-linear-gradient(40deg,#ead8c4 0 25px,#e7cabb 25px 50px)}
+.aetc-scene.calm{background:linear-gradient(140deg,#f5efd8,#dcefd9)}
+.aetc-scene strong{position:relative;z-index:1}
+.aetc-scene small{position:relative;z-index:1}
+.aetc-figure-caption{font-size:.88rem;color:#4e6357}
+.aetc-faq{margin:24px 0}
+.aetc-footer{padding:30px 0;background:#18362f;color:#f1f8ee}
+.aetc-footer a{color:#ddf2cf}
+@media(max-width:820px){.aetc-grid,.aetc-grid.two,.aetc-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:580px){.aetc-grid,.aetc-grid.two,.aetc-steps,.aetc-illustration{grid-template-columns:1fr}.aetc-hero{padding:45px 0}.aetc-scene{min-height:160px}.aetc-page h1{font-size:clamp(2.3rem,11vw,3.5rem)}}
+@media(prefers-reduced-motion:reduce){.aetc-page *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
